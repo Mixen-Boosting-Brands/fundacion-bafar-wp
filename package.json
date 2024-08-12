@@ -10,14 +10,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://gitlab.com/mixen/fundacion-bafar.git"
+        "url": "git+https://github.com/Mixen-Boosting-Brands/fundacion-bafar-wp.git"
     },
     "author": "Luis Carlos Pando <hey@luiscarlospando.com>",
     "license": "ISC",
     "bugs": {
-        "url": "https://gitlab.com/mixen/fundacion-bafar/issues"
+        "url": "https://github.com/Mixen-Boosting-Brands/fundacion-bafar-wp/issues"
     },
-    "homepage": "https://gitlab.com/mixen/fundacion-bafar#readme",
+    "homepage": "https://github.com/Mixen-Boosting-Brands/fundacion-bafar-wp#readme",
     "devDependencies": {
         "@babel/cli": "^7.17.10",
         "@babel/core": "^7.17.10",

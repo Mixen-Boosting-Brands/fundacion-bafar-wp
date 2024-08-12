@@ -1,3 +1,3 @@
-# Academia Bafar
+# Fundación Bafar
 
-&copy; 2024 mixen: Boosting Brands
+&copy; 2024 Mixen: Boosting Brands
