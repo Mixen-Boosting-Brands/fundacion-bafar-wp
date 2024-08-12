@@ -1,0 +1,321 @@
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm) {
+    #nuestras-instalaciones {
+        .bg-nuestras-instalaciones {
+            bottom: 80px;
+        }
+    }
+
+    footer {
+        .logo {
+            max-width: 500px;
+        }
+    }
+
+    #noticias {
+        #titulo-ultima-noticia {
+            &::after {
+                right: -290px;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+    #nuestras-instalaciones {
+        .bg-nuestras-instalaciones {
+            bottom: 69px;
+        }
+    }
+
+    #noticias {
+        #titulo-ultima-noticia {
+            &::after {
+                right: -310px;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+    #jumbotron {
+        .container-fluid {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    #por-que {
+        background-position: top;
+        margin-top: -60px;
+        padding-top: 110px !important;
+
+        .educational-football-program {
+            position: relative;
+
+            &::before {
+                @include background(
+                    "../images/thumb-pq-izquierda.png",
+                    center,
+                    contain
+                );
+                position: absolute;
+                bottom: -180px;
+                left: -228px;
+                width: 292px;
+                height: 274px;
+                display: block;
+                content: "";
+                @include transition(ease, 0.3s);
+            }
+        }
+
+        .espiritu,
+        .entrenadores,
+        .entrena {
+            position: relative;
+
+            &::before {
+                border: 1px solid $primary;
+                border-bottom: none;
+                position: absolute;
+                left: 13px;
+                width: 50px;
+                content: "";
+                @include transition(ease, 0.3s);
+            }
+        }
+
+        .espiritu {
+            &::before {
+                bottom: -480px;
+                height: 269%;
+            }
+        }
+
+        .entrenadores {
+            &::before {
+                bottom: -284px;
+                height: 142%;
+            }
+        }
+
+        .entrena {
+            &::before {
+                bottom: -75px;
+                height: 34%;
+            }
+        }
+    }
+
+    #nuestra-organizacion {
+        .swiper-nuestra-organizacion-button-prev,
+        .swiper-nuestra-organizacion-button-next {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    #nuestros-entrenadores {
+        .card {
+            .card-body {
+                height: 0;
+                opacity: 0;
+            }
+
+            &:hover {
+                .card-body {
+                    height: 150px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    #nuestras-instalaciones {
+        .bg-nuestras-instalaciones {
+            bottom: 131px;
+        }
+    }
+
+    #videos {
+        padding: 100px 0;
+
+        .card {
+            opacity: 0.8;
+            -webkit-transform: scale(0.8); /* Safari */
+            -moz-transform: scale(0.8); /* Firefox */
+            -ms-transform: scale(0.8); /* IE 9 */
+            -o-transform: scale(0.8); /* Opera */
+            transform: scale(0.8);
+        }
+
+        .swiper-slide-next {
+            .card {
+                opacity: 1;
+                -webkit-transform: scale(1); /* Safari */
+                -moz-transform: scale(1); /* Firefox */
+                -ms-transform: scale(1); /* IE 9 */
+                -o-transform: scale(1); /* Opera */
+                transform: scale(1);
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    #faq {
+        &::after {
+            right: 60px;
+        }
+    }
+
+    #contacto {
+        padding: 60px 0;
+    }
+
+    #acompanantes {
+        background-position: top;
+        margin-top: -60px;
+
+        h1 {
+            &::after {
+                right: -68px;
+                width: 140px;
+                height: 140px;
+            }
+        }
+    }
+
+    #nuestros-valores {
+        .contenedor-valores {
+            flex-direction: row;
+        }
+
+        .valor {
+            align-items: end;
+            flex: 1 1 10%;
+            padding: auto;
+        }
+    }
+
+    #noticias {
+        #titulo-ultima-noticia {
+            &::after {
+                right: -340px;
+            }
+        }
+    }
+
+    #slider-mas-contenido {
+        .card {
+            .card-body {
+                .overlay {
+                    opacity: 0;
+                }
+
+                &:hover {
+                    .overlay {
+                        opacity: 1 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {
+    #por-que {
+        .educational-football-program {
+            &::before {
+                bottom: -228px;
+                left: -286px;
+                width: 362px;
+                height: 340px;
+            }
+        }
+
+        .espiritu {
+            &::before {
+                bottom: -444px;
+                height: 288%;
+            }
+        }
+
+        .entrenadores {
+            &::before {
+                bottom: -248px;
+                height: 125%;
+            }
+        }
+
+        .entrena {
+            &::before {
+                bottom: -60px;
+                height: 33%;
+            }
+        }
+    }
+
+    #nuestras-instalaciones {
+        .bg-nuestras-instalaciones {
+            bottom: 146px;
+        }
+    }
+
+    #organizacion {
+        padding-bottom: 90px;
+    }
+
+    #noticias {
+        #titulo-ultima-noticia {
+            &::after {
+                right: -370px;
+            }
+        }
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@include media-breakpoint-up(xxl) {
+    #por-que {
+        .educational-football-program {
+            &::before {
+                bottom: -268px;
+                left: -338px;
+                width: 428px;
+                height: 402px;
+            }
+        }
+
+        .espiritu {
+            &::before {
+                bottom: -363px;
+                height: 234%;
+            }
+        }
+
+        .entrenadores {
+            &::before {
+                bottom: -224px;
+                height: 158%;
+            }
+        }
+
+        .entrena {
+            &::before {
+                bottom: -60px;
+                height: 36%;
+            }
+        }
+    }
+}
