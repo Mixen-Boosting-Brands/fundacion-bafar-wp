@@ -16,16 +16,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateScroll() {
         var scroll = window.pageYOffset || document.documentElement.scrollTop;
+        var navbarHome = document.querySelector(".navbar-home");
+        var isHomePage = document.body.classList.contains("home"); // Check if it's the homepage
 
         if (scroll >= 1) {
             header.classList.add("navbar-scroll");
+            if (isHomePage && navbarHome) {
+                header.classList.remove("navbar-home");
+            }
         } else {
             header.classList.remove("navbar-scroll");
+            if (isHomePage) {
+                header.classList.add("navbar-home");
+            }
         }
     }
 
     window.addEventListener("scroll", updateScroll);
-    updateScroll();
+    updateScroll(); // Call once to set initial state
 });
 
 // Function that closes menu
