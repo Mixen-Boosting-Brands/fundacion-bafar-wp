@@ -373,6 +373,11 @@ header {
 #aliados {
     background-color: $primary;
     color: $white;
+
+    .no-padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 $jumbotron-bg-images: (
