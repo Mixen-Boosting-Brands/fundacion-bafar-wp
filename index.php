@@ -15,7 +15,7 @@
                         <img
                             src="<?php echo esc_url(
                                 get_template_directory_uri()
-                            ); ?>/assets/images/jumbotron/thumb-jumbotron-home.png"
+                            ); ?>/assets/images/jumbotron/thumb-por-mejores-mexicanos.png"
                             alt=""
                             id="pmm"
                             class="img-fluid"
