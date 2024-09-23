@@ -362,6 +362,10 @@ header {
     @include background("../images/bg-jumbotron-home.png", center, cover);
     color: $primary !important;
     min-height: auto !important;
+
+    #pmm {
+        max-width: 300px;
+    }
 }
 
 #aliados {
