@@ -152,7 +152,9 @@
             </div>
         </div>
 
-        <header id="navbar">
+        <header id="navbar" <?php if (
+            is_home()
+        ): ?>class="navbar-home"<?php endif; ?>>
             <div class="container">
                 <div class="row">
                     <div class="col-3 col-lg-2 my-auto">
@@ -160,7 +162,9 @@
                             <img
                                 src="<?php echo esc_url(
                                     get_template_directory_uri()
-                                ); ?>/assets/images/logo@2x.png"
+                                ); ?>/assets/images/logo<?php if (
+    is_home()
+): ?>-azul<?php endif; ?>@2x.png"
                                 alt=""
                                 class="logo img-fluid"
                                 id="logo-navbar"
