@@ -11,23 +11,36 @@ import "../src/modals";
 
 // Header
 document.addEventListener("DOMContentLoaded", function () {
-    // Cache the DOM element containing the navbar
+    // Cache the DOM elements
     var header = document.getElementById("navbar");
+    var logoNavbar = document.getElementById("logo-navbar");
+    var isHomePage = document.body.classList.contains("home");
+    var originalLogoSrc = logoNavbar ? logoNavbar.src : "";
 
     function updateScroll() {
         var scroll = window.pageYOffset || document.documentElement.scrollTop;
         var navbarHome = document.querySelector(".navbar-home");
-        var isHomePage = document.body.classList.contains("home"); // Check if it's the homepage
 
         if (scroll >= 1) {
             header.classList.add("navbar-scroll");
-            if (isHomePage && navbarHome) {
-                header.classList.remove("navbar-home");
+            if (isHomePage) {
+                if (navbarHome) {
+                    header.classList.remove("navbar-home");
+                }
+                if (logoNavbar) {
+                    logoNavbar.src = logoNavbar.src.replace(
+                        "logo-azul@2x.png",
+                        "logo@2x.png"
+                    );
+                }
             }
         } else {
             header.classList.remove("navbar-scroll");
             if (isHomePage) {
                 header.classList.add("navbar-home");
+                if (logoNavbar) {
+                    logoNavbar.src = originalLogoSrc;
+                }
             }
         }
     }
