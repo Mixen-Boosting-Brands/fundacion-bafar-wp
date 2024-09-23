@@ -361,6 +361,7 @@ header {
 .bg-jumbotron-home {
     @include background("../images/bg-jumbotron-home.png", center, cover);
     color: $primary !important;
+    min-height: auto !important;
 }
 
 #aliados {
