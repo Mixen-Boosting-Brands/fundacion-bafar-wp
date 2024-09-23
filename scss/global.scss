@@ -354,7 +354,12 @@ header {
 
 .bg-jumbotron-home {
     @include background("../images/bg-jumbotron-home.png", center, cover);
-    color: $primary;
+    color: $primary !important;
+}
+
+#aliados {
+    background-color: $primary;
+    color: $white;
 }
 
 $jumbotron-bg-images: (
