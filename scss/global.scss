@@ -352,6 +352,11 @@ header {
     }
 }
 
+.bg-jumbotron-home {
+    @include background("../images/bg-jumbotron-home.png", center, cover);
+    color: $primary;
+}
+
 $jumbotron-bg-images: (
     "../images/bg-jumbotron-1.png",
     "../images/bg-jumbotron-2.png",
