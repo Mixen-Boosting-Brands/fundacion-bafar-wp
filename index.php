@@ -46,10 +46,12 @@
     </div>
     <div class="container-fluid no-padding">
         <div class="row">
-            <div class="col-12 py-30">
-                <img src="<?php echo esc_url(
-                    get_template_directory_uri()
-                ); ?>/assets/images/aliados/aliados.png" alt="" class="img-fluid">
+            <div class="col-12">
+                <div class="container-aliados">
+                    <img src="<?php echo esc_url(
+                        get_template_directory_uri()
+                    ); ?>/assets/images/aliados/aliados.png" alt="" class="img-fluid">
+                </div>
             </div>
         </div>
     </div>
