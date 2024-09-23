@@ -10,7 +10,8 @@
                     <div class="col-12">
                         <h2>Fundación</h2>
                         <h1 class="fw-bold">Grupo Bafar</h1>
-                        <p>Una institución</p>
+                        <p>Una institución orientada a la formación de los mejores mexicanos.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
                 <div class="row">
