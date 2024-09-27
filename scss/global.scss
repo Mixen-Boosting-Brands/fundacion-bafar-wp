@@ -433,6 +433,15 @@ $index-jumbotron: 1;
             display: flex;
             justify-content: center;
             align-items: center;
+            opacity: 0;
+            @include transition(ease, 0.3s);
+        }
+
+        &:hover,
+        &:focus {
+            .overlay {
+                opacity: 1;
+            }
         }
     }
 
