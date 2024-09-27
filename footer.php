@@ -1,4 +1,4 @@
-		<section id="mapa">
+		<!-- section id="mapa">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5035.61538524368!2d-106.1211510918162!3d28.582024651338507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea5d0765b419f5%3A0x97c8db700a6c8f85!2sGrupo%20Bafar!5e0!3m2!1ses-419!2smx!4v1721861492320!5m2!1ses-419!2smx"
                 width="100%"
@@ -8,7 +8,7 @@
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-        </section>
+        </section -->
 
         <section id="contacto">
             <div class="container">
@@ -136,6 +136,30 @@
                                         </div>
                                     </div>
                                 </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <small>
+                                            Lic. Martha González O.<br>
+                                            Dirección Fundación<br>
+                                            <a href="mailto:mgonzalez@bafar.com.mx">mgonzalez@bafar.com.mx</a>
+                                        </small>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <small>
+                                            Prof. David Contreras Ch.<br>
+                                            Escuelas Socio Deportivas<br>
+                                            <a href="mailto:dcontreras@bafar.com.mx">dcontreras@bafar.com.mx</a>
+                                        </small>
+                                    </li>
+                                </ul>
+                                <address>
+                                    Km 7.5 Carretera a Cuauhtémoc, Col. Las Ánimas. C.P. 31450, Chihuahua, Chih. México<br>
+                                    Tel. <a href="+526144390100">(614) 439 0100 ext. 7213</a>
+                                </address>
                             </div>
                         </div>
                     </div>
