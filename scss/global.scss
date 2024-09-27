@@ -408,6 +408,40 @@ $index-jumbotron: 1;
     $index-jumbotron: $index-jumbotron + 1;
 }
 
+#figuras {
+    .figura {
+        color: $white;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+
+        .overlay {
+            background-color: rgba(203, 130, 67, 0.8);
+            padding: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .fig-up {
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+    }
+
+    .fig-down {
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    #fig-1 {
+        @include background("../images/figuras/bg-fig-1.png", center, cover);
+    }
+}
+
 #nosotros {
     @include background("../images/bg-nosotros.png", center, cover);
 }

@@ -57,4 +57,25 @@
     </div>
 </section>
 
+<section id="figuras" class="py-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 offset-lg-1">
+                <div id="fig-1" class="figura fig-up">
+                    <div class="overlay">
+                        <h1>Centro de acopio</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div id="fig-2" class="figura fig-down">
+                    <div class="overlay">
+                        <h1>Centro de acopio</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>
