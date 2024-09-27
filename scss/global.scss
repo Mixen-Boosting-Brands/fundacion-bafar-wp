@@ -418,6 +418,7 @@ $index-jumbotron: 1;
 
         h1 {
             @include font-size(2rem);
+            margin-bottom: 0;
         }
 
         .overlay {
