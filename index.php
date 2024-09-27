@@ -37,7 +37,7 @@
 </section>
 
 <section id="aliados" class="py-30">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-12">
                 <h1>Nuestros Aliados Sociales</h1>
