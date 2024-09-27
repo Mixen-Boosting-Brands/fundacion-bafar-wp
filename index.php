@@ -58,7 +58,7 @@
 </section>
 
 <section id="figuras" class="py-30">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2 offset-lg-1">
                 <div id="fig-1" class="figura fig-up">

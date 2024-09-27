@@ -421,7 +421,7 @@ $index-jumbotron: 1;
         }
 
         .overlay {
-            background-color: rgba(203, 130, 67, 0.8);
+            background-color: rgba(23, 49, 83, 0.95);
             padding: 30px;
             position: absolute;
             top: 0;
@@ -436,13 +436,13 @@ $index-jumbotron: 1;
     }
 
     .fig-up {
-        border-top-right-radius: 50px;
-        border-top-left-radius: 50px;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
     }
 
     .fig-down {
-        border-bottom-right-radius: 50px;
-        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
     }
 
     #fig-1 {
