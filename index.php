@@ -74,6 +74,27 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-2">
+                <div id="fig-3" class="figura fig-up">
+                    <div class="overlay">
+                        <h1>Centro de acopio</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div id="fig-4" class="figura fig-down">
+                    <div class="overlay">
+                        <h1>Centro de acopio</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div id="fig-5" class="figura fig-up">
+                    <div class="overlay">
+                        <h1>Centro de acopio</h1>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

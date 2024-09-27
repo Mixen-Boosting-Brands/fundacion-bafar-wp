@@ -446,8 +446,14 @@ $index-jumbotron: 1;
         border-bottom-left-radius: 100px;
     }
 
-    #fig-1 {
-        @include background("../images/figuras/bg-fig-1.png", center, cover);
+    @for $i from 1 through 5 {
+        #fig-#{$i} {
+            @include background(
+                "../images/figuras/bg-fig-#{$i}.png",
+                center,
+                cover
+            );
+        }
     }
 }
 
