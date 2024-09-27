@@ -94,23 +94,31 @@
                             ); ?>">Inicio</a>
                         </li>
                         <li>
-                            <a class="anchor" id="btn-nav-2" href="#nosotros"
+                            <a class="anchor" id="btn-nav-2" href="<?php echo get_permalink(
+                                2
+                            ); ?>"
                                 >Nosotros</a
                             >
                         </li>
                         <li>
-                            <a class="anchor" id="btn-nav-3" href="#prensa"
+                            <a class="anchor" id="btn-nav-3" href="<?php echo get_permalink(
+                                10
+                            ); ?>"
                                 >Prensa</a
                             >
                         </li>
                         <li>
-                            <a class="anchor" id="btn-nav-4" href="#galeria"
+                            <a class="anchor" id="btn-nav-4" href="<?php echo get_permalink(
+                                8
+                            ); ?>"
                                 >Galería</a
                             >
                         </li>
                         <li>
-                            <a class="anchor" id="btn-nav-5" href="#voluntarios"
-                                >Galería</a
+                            <a class="anchor" id="btn-nav-5" href="<?php echo get_permalink(
+                                14
+                            ); ?>"
+                                >Voluntarios</a
                             >
                         </li>
                     </ul>
@@ -138,14 +146,8 @@
                 <div id="contacto-menu">
                     <ul class="list-unstyled">
                         <li>
-                            <i class="far fa-envelope"></i>
-                            <a href="mailto:correo@dominio.com"
-                                >correo@dominio.com</a
-                            >
-                        </li>
-                        <li>
                             <i class="fas fa-phone"></i>
-                            <a href="tel:+526142782609">(614) 278 2609</a>
+                            <a href="tel:+526144390100">(614) 439 0100 ext. 7213</a>
                         </li>
                     </ul>
                 </div>
@@ -180,19 +182,29 @@
                                     ); ?>">Inicio</a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#nosotros">Nosotros</a>
+                                    <a href="<?php echo get_permalink(
+                                        2
+                                    ); ?>">Nosotros</a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#prensa">Prensa</a>
+                                    <a href="<?php echo get_permalink(
+                                        10
+                                    ); ?>">Prensa</a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#galeria">Galería</a>
+                                    <a href="<?php echo get_permalink(
+                                        8
+                                    ); ?>">Galería</a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#videos">Videos</a>
+                                    <a href="<?php echo get_permalink(
+                                        12
+                                    ); ?>">Videos</a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#voluntarios">Voluntarios</a>
+                                    <a href="<?php echo get_permalink(
+                                        14
+                                    ); ?>">Voluntarios</a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="#contacto">Contacto</a>
