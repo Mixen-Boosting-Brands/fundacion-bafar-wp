@@ -118,10 +118,11 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div
-                                class="card text-bg-light mb-3 rounded-4"
+                                class="card mb-3"
                             >
+                                <a href="#"></a>
                                 <div class="card-body">
-                                    <h2 class="card-title">Galería</h2>
+                                    <h2 class="card-title">Galería <i class="fa-solid fa-circle-arrow-right"></i></h2>
                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut magnam perferendis mollitia dolores odit distinctio ea a corporis? Fuga accusantium eius ad? Ipsa non doloremque quas provident, eum error!</p>
                                 </div>
                                 <img src="<?php echo esc_url(
@@ -129,45 +130,7 @@
                                 ); ?>/assets/images/thumb-logro.png" class="card-img-bottom" alt="...">
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div
-                                class="card text-bg-light mb-3 rounded-4"
-                            >
-                                <div class="card-body">
-                                    <h2 class="card-title">Videos</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut magnam perferendis mollitia dolores odit distinctio ea a corporis? Fuga accusantium eius ad? Ipsa non doloremque quas provident, eum error!</p>
-                                </div>
-                                <img src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/thumb-logro.png" class="card-img-bottom" alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div
-                                class="card text-bg-light mb-3 rounded-4"
-                            >
-                                <div class="card-body">
-                                    <h2 class="card-title">Noticias</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut magnam perferendis mollitia dolores odit distinctio ea a corporis? Fuga accusantium eius ad? Ipsa non doloremque quas provident, eum error!</p>
-                                </div>
-                                <img src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/thumb-logro.png" class="card-img-bottom" alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div
-                                class="card text-bg-light mb-3 rounded-4"
-                            >
-                                <div class="card-body">
-                                    <h2 class="card-title">Voluntariado</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut magnam perferendis mollitia dolores odit distinctio ea a corporis? Fuga accusantium eius ad? Ipsa non doloremque quas provident, eum error!</p>
-                                </div>
-                                <img src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/thumb-logro.png" class="card-img-bottom" alt="...">
-                            </div>
-                        </div>
+
                     </div>
                     <div class="swiper-button-next">
                         <i class="fa-solid fa-arrow-right"></i>
