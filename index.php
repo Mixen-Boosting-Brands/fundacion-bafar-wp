@@ -104,7 +104,7 @@
     <div class="container">
         <div class="row mb-4">
             <div
-                class="col-10 offset-1 col-lg-12 offset-lg-0 text-center"
+                class="col-10 offset-1 col-lg-12 offset-lg-0"
             >
                 <h1>
                     <span class="fw-light">Explora</span><br>

@@ -210,4 +210,49 @@ document.addEventListener("DOMContentLoaded", function () {
             el: ".swiper-pagination",
         },
     });
+
+    // init Swiper:
+    const swiperLogros = new Swiper(".swiper-logros", {
+        // configure Swiper to use modules
+        modules: [Navigation, Pagination, Autoplay],
+
+        // Optional parameters
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        direction: "horizontal",
+        loop: false,
+        allowTouchMove: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        grabCursor: true,
+
+        // breakpoints
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            992: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
+
+        // if we need navigation
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
 });
