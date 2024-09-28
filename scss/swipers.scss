@@ -137,6 +137,30 @@
     }
 }
 
+.swiper-logros {
+    .swiper-slide {
+        @include transition(ease, 0.3s);
+    }
+
+    .swiper-pagination {
+        bottom: 60px !important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $white;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $white;
+    }
+}
+
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-up(sm) {
 }

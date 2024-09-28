@@ -466,6 +466,80 @@ $index-jumbotron: 1;
     }
 }
 
+#logros {
+    @include background("../images/bg-logros.png", center, cover);
+
+    .overlay {
+        background-color: rgba(23, 49, 83, 0.95);
+    }
+
+    .card {
+        background-color: transparent !important;
+        border: none;
+        border-radius: 0 !important;
+
+        .card-body {
+            padding: 0;
+            position: relative;
+
+            .overlay {
+                background-color: rgba(255, 255, 255, 0.51);
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: center;
+                @include transition(ease, 0.3s);
+                z-index: 1;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    h1 {
+                        @include font-size(1rem);
+                        color: $primary;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .thumbnail {
+                background-size: cover !important;
+                background-position: center !important;
+                width: 100%;
+                height: 600px;
+                float: left;
+            }
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        @include font-size(1.6rem);
+        border: 1px solid $white;
+        border-radius: 50%;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+
+        &::after {
+            content: "";
+        }
+    }
+}
+
 #nosotros {
     @include background("../images/bg-nosotros.png", center, cover);
 }
