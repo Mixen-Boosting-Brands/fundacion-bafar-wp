@@ -511,16 +511,24 @@ $index-jumbotron: 1;
         &:focus {
             background-color: $white !important;
             color: $primary !important;
-            @include transform-scale(1.03);
+            @include transform-scale(0.9);
         }
+    }
+
+    .swiper-buttons {
+        position: absolute;
+        width: 300px;
+        top: 0;
+        right: 0;
     }
 
     .swiper-button-prev,
     .swiper-button-next {
         @include font-size(1.6rem);
+        background-color: $white;
         border: 1px solid $white;
         border-radius: 50%;
-        color: $white;
+        color: $primary;
         display: flex;
         justify-content: center;
         text-align: center;

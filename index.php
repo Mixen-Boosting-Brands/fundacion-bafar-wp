@@ -122,7 +122,7 @@
                             >
                                 <a href="#"></a>
                                 <div class="card-body">
-                                    <h2 class="card-title">Galería <i class="fa-solid fa-circle-arrow-right"></i></h2>
+                                    <h2 class="card-title"><span>Galería</span> <i class="fa-solid fa-circle-arrow-right"></i></h2>
                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut magnam perferendis mollitia dolores odit distinctio ea a corporis? Fuga accusantium eius ad? Ipsa non doloremque quas provident, eum error!</p>
                                 </div>
                                 <img src="<?php echo esc_url(
@@ -132,11 +132,13 @@
                         </div>
 
                     </div>
-                    <div class="swiper-button-next">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="fa-solid fa-arrow-left"></i>
+                    <div class="swiper-buttons">
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </div>
                     </div>
                 </div>
             </div>
