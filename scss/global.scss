@@ -494,6 +494,12 @@ $index-jumbotron: 1;
         .card-body {
             .card-title {
                 display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                span {
+                    margin-right: auto;
+                }
             }
         }
 
@@ -503,9 +509,9 @@ $index-jumbotron: 1;
 
         &:hover,
         &:focus {
-            background-color: $white;
+            background-color: $white !important;
             color: $primary !important;
-            @include transform-scale(1.05);
+            @include transform-scale(1.03);
         }
     }
 
