@@ -52,7 +52,7 @@
 
         <link rel="stylesheet" href="<?php echo esc_url(
             get_template_directory_uri()
-        ); ?>/assets/css/styles.css?v=4" />
+        ); ?>/assets/css/styles.css?v=5" />
     </head>
     <body <?php body_class(); ?>>
         <div class="redes-sociales">
