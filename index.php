@@ -130,7 +130,48 @@
                                 ); ?>/assets/images/thumb-logro.png" class="card-img-bottom" alt="...">
                             </div>
                         </div>
-
+                        <div class="swiper-slide">
+                            <div
+                                class="card mb-3"
+                            >
+                                <a href="#"></a>
+                                <div class="card-body">
+                                    <h2 class="card-title"><span>Videos</span> <i class="fa-solid fa-circle-arrow-right"></i></h2>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut magnam perferendis mollitia dolores odit distinctio ea a corporis? Fuga accusantium eius ad? Ipsa non doloremque quas provident, eum error!</p>
+                                </div>
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/thumb-logro.png" class="card-img-bottom" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="card mb-3"
+                            >
+                                <a href="#"></a>
+                                <div class="card-body">
+                                    <h2 class="card-title"><span>Noticias</span> <i class="fa-solid fa-circle-arrow-right"></i></h2>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut magnam perferendis mollitia dolores odit distinctio ea a corporis? Fuga accusantium eius ad? Ipsa non doloremque quas provident, eum error!</p>
+                                </div>
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/thumb-logro.png" class="card-img-bottom" alt="...">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="card mb-3"
+                            >
+                                <a href="#"></a>
+                                <div class="card-body">
+                                    <h2 class="card-title"><span>Voluntariado</span> <i class="fa-solid fa-circle-arrow-right"></i></h2>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut magnam perferendis mollitia dolores odit distinctio ea a corporis? Fuga accusantium eius ad? Ipsa non doloremque quas provident, eum error!</p>
+                                </div>
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/thumb-logro.png" class="card-img-bottom" alt="...">
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-buttons">
                         <div class="swiper-button-next">

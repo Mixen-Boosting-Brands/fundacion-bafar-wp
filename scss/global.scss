@@ -511,14 +511,14 @@ $index-jumbotron: 1;
         &:focus {
             background-color: $white !important;
             color: $primary !important;
-            @include transform-scale(0.9);
+            @include transform-scale(0.95);
         }
     }
 
     .swiper-buttons {
         position: absolute;
-        width: 300px;
-        top: 0;
+        width: 160px;
+        top: 26px;
         right: 0;
     }
 

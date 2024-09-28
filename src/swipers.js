@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         direction: "horizontal",
         loop: false,
-        allowTouchMove: false,
+        allowTouchMove: true,
         slidesPerView: 1,
         spaceBetween: 30,
         grabCursor: true,

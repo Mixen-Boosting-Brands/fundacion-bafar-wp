@@ -138,6 +138,8 @@
 }
 
 .swiper-logros {
+    padding-top: 60px;
+
     .swiper-slide {
         @include transition(ease, 0.3s);
     }

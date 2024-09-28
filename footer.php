@@ -230,6 +230,6 @@
         ></script>
         <script src="<?php echo esc_url(
             get_template_directory_uri()
-        ); ?>/assets/js/app.bundle.js?v=8"></script>
+        ); ?>/assets/js/app.bundle.js?v=9"></script>
     </body>
 </html>
