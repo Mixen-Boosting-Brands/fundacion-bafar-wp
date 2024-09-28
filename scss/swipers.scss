@@ -169,6 +169,9 @@
 
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) {
+    .swiper-logros {
+        top: -76px;
+    }
 }
 
 // Large devices (desktops, 992px and up)

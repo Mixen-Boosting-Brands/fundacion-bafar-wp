@@ -25,6 +25,10 @@
 
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) {
+    #logros {
+        padding-bottom: 0;
+    }
+
     #nuestras-instalaciones {
         .bg-nuestras-instalaciones {
             bottom: 69px;
