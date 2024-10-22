@@ -129,7 +129,7 @@
                     <div class="swiper-wrapper">
                         <?php
                         $args = [
-                            "post_type" => "logros",
+                            "post_type" => "logro",
                             "posts_per_page" => -1, // Retrieve all posts
                         ];
 
