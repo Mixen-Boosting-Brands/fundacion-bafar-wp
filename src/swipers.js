@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
         direction: "horizontal",
         loop: false,
         allowTouchMove: true,
-        slidesPerView: 1,
-        spaceBetween: 0,
+        slidesPerView: 2,
+        spaceBetween: 15,
         grabCursor: true,
 
         // breakpoints
