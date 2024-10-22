@@ -100,246 +100,89 @@ get_header(); ?>
             class="row small mb-5"
             data-masonry='{"percentPosition": true }'
         >
-            <div class="col-lg-6 chico">
-                <hr />
-                <div class="row">
-                    <div class="col-4 my-auto">
-                        <a href="#">
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/noticias/thumb-noticia-small.png"
-                                alt=""
-                                class="img-fluid"
-                            />
-                        </a>
+            <?php
+            // Custom query to get the next 8 posts from "Noticias" category
+            $args = [
+                "post_type" => "post",
+                "posts_per_page" => 8,
+                "category_name" => "Noticias",
+                "offset" => 1,
+                "orderby" => "date",
+                "order" => "DESC",
+            ];
+
+            $noticias_query_below = new WP_Query($args);
+
+            if ($noticias_query_below->have_posts()):
+                $counter = 0;
+                echo '<div class="row">'; // Start the main row
+                while ($noticias_query_below->have_posts()):
+
+                    $noticias_query_below->the_post();
+                    $counter++;
+
+                    // Determine the class based on the counter
+                    $class = in_array($counter, [1, 4, 5, 8])
+                        ? "chico"
+                        : "grande";
+
+                    // Open a new row for every two posts
+                    if ($counter % 2 == 1) {
+                        echo '<div class="row">';
+                    }
+                    ?>
+
+                    <div class="col-lg-6 <?php echo $class; ?>">
+                        <hr />
+                        <div class="row">
+                            <?php if ($class == "chico"): ?>
+                                <div class="col-4 my-auto">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_post_thumbnail(
+                                            "thumb-noticia-chico",
+                                            ["class" => "img-fluid"]
+                                        ); ?>
+                                    </a>
+                                </div>
+                                <div class="col-8">
+                            <?php else: ?>
+                                <div class="col-12 mb-3">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_post_thumbnail(
+                                            "thumb-noticia-grande",
+                                            ["class" => "img-fluid"]
+                                        ); ?>
+                                    </a>
+                                </div>
+                                <div class="col-12">
+                            <?php endif; ?>
+                                <a href="<?php the_permalink(); ?>">
+                                    <h2><?php the_title(); ?></h2>
+                                </a>
+                                <p><?php the_excerpt(); ?></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-8">
-                        <a href="#">
-                            <h2>
-                                Inicia programa Escuelas Sociodeportivas
-                                en Camargo
-                            </h2>
-                        </a>
-                        <p>
-                            Worem ipsum dolor sit amet,
-                            consecteturadipiscing elit. Nunc vulputate
-                            libero et velit interdum, ac aliquet odio
-                            mattis.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 grande">
-                <hr />
-                <div class="row">
-                    <div class="col-12 mb-3">
-                        <a href="#">
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/noticias/thumb-noticia-big.png"
-                                alt=""
-                                class="img-fluid"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a href="#">
-                            <h2>
-                                Inicia programa Escuelas Sociodeportivas
-                                en Camargo
-                            </h2>
-                        </a>
-                        <p>
-                            Worem ipsum dolor sit amet,
-                            consecteturadipiscing elit. Nunc vulputate
-                            libero et velit interdum, ac aliquet odio
-                            mattis.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 grande">
-                <hr />
-                <div class="row">
-                    <div class="col-12 mb-3">
-                        <a href="#">
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/noticias/thumb-noticia-big.png"
-                                alt=""
-                                class="img-fluid"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a href="#">
-                            <h2>
-                                Inicia programa Escuelas Sociodeportivas
-                                en Camargo
-                            </h2>
-                        </a>
-                        <p>
-                            Worem ipsum dolor sit amet,
-                            consecteturadipiscing elit. Nunc vulputate
-                            libero et velit interdum, ac aliquet odio
-                            mattis.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 chico">
-                <hr />
-                <div class="row">
-                    <div class="col-4 my-auto">
-                        <a href="#">
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/noticias/thumb-noticia-small.png"
-                                alt=""
-                                class="img-fluid"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-8">
-                        <a href="#">
-                            <h2>
-                                Inicia programa Escuelas Sociodeportivas
-                                en Camargo
-                            </h2>
-                        </a>
-                        <p>
-                            Worem ipsum dolor sit amet,
-                            consecteturadipiscing elit. Nunc vulputate
-                            libero et velit interdum, ac aliquet odio
-                            mattis.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 chico">
-                <hr />
-                <div class="row">
-                    <div class="col-4 my-auto">
-                        <a href="#">
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/noticias/thumb-noticia-small.png"
-                                alt=""
-                                class="img-fluid"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-8">
-                        <a href="#">
-                            <h2>
-                                Inicia programa Escuelas Sociodeportivas
-                                en Camargo
-                            </h2>
-                        </a>
-                        <p>
-                            Worem ipsum dolor sit amet,
-                            consecteturadipiscing elit. Nunc vulputate
-                            libero et velit interdum, ac aliquet odio
-                            mattis.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 grande">
-                <hr />
-                <div class="row">
-                    <div class="col-12 mb-3">
-                        <a href="#">
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/noticias/thumb-noticia-big.png"
-                                alt=""
-                                class="img-fluid"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a href="#">
-                            <h2>
-                                Inicia programa Escuelas Sociodeportivas
-                                en Camargo
-                            </h2>
-                        </a>
-                        <p>
-                            Worem ipsum dolor sit amet,
-                            consecteturadipiscing elit. Nunc vulputate
-                            libero et velit interdum, ac aliquet odio
-                            mattis.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 grande">
-                <hr />
-                <div class="row">
-                    <div class="col-12 mb-3">
-                        <a href="#">
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/noticias/thumb-noticia-big.png"
-                                alt=""
-                                class="img-fluid"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a href="#">
-                            <h2>
-                                Inicia programa Escuelas Sociodeportivas
-                                en Camargo
-                            </h2>
-                        </a>
-                        <p>
-                            Worem ipsum dolor sit amet,
-                            consecteturadipiscing elit. Nunc vulputate
-                            libero et velit interdum, ac aliquet odio
-                            mattis.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 chico">
-                <hr />
-                <div class="row">
-                    <div class="col-4 my-auto">
-                        <a href="#">
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/noticias/thumb-noticia-small.png"
-                                alt=""
-                                class="img-fluid"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-8">
-                        <a href="#">
-                            <h2>
-                                Inicia programa Escuelas Sociodeportivas
-                                en Camargo
-                            </h2>
-                        </a>
-                        <p>
-                            Worem ipsum dolor sit amet,
-                            consecteturadipiscing elit. Nunc vulputate
-                            libero et velit interdum, ac aliquet odio
-                            mattis.
-                        </p>
-                    </div>
-                </div>
-            </div>
+
+                    <?php // Close the row after every two posts
+                    if ($counter % 2 == 0) {
+                        echo "</div>"; // Close the inner row
+                    }
+                endwhile;
+
+                // Close the last row if there's an odd number of posts
+                if ($counter % 2 != 0) {
+                    echo "</div>";
+                }
+
+                echo "</div>"; // Close the main row
+                // No posts found
+            else:
+                echo "<p>No posts found.</p>";
+            endif;
+
+            wp_reset_postdata();
+            ?>
         </div>
         <div class="row">
             <div class="col-12 text-center">
