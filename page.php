@@ -1,45 +1,59 @@
 <?php get_header(); ?>
 
-	<main role="main" aria-label="Content">
-		<!-- section -->
-		<section>
+<section id="jumbotron" class="bg-jumbotron-1">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="mb-5 col-lg-6 my-lg-auto order-lg-2 text-end">
+                <?php the_post_thumbnail("thumb-noticia-grande", [
+                    "class" => "thumb-noticia-grande img-fluid",
+                ]); ?>
+            </div>
+            <div
+                class="col-lg-5 offset-lg-1 my-lg-auto order-lg-1 text-center text-lg-start"
+            >
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h1 class="fw-bold"><?php the_title(); ?></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <a class="anchor arrow" href=".after-jumbotron">
+                            <i
+                                class="fa-solid fa-arrow-down-long moveUpDown"
+                            ></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-			<h1><?php the_title(); ?></h1>
-
-		<?php if ( have_posts()) : while ( have_posts() ) : the_post(); ?>
-
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-				<?php the_content(); ?>
-
-				<?php comments_template( '', true ); // Remove if you don't want comments. ?>
-
-				<br class="clear">
-
-				<?php edit_post_link(); ?>
-
-			</article>
-			<!-- /article -->
-
-		<?php endwhile; ?>
-
-		<?php else : ?>
-
-			<!-- article -->
-			<article>
-
-				<h2><?php esc_html_e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-			</article>
-			<!-- /article -->
-
-		<?php endif; ?>
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
+<section id="interna" class="after-jumbotron py-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <?php if (have_posts()):
+                    while (have_posts()):
+                        the_post(); ?>
+                    <?php the_post_thumbnail("thumb-noticia-grande", [
+                        "class" => "img-fluid mb-4",
+                    ]); ?>
+                    <h1>
+                        <?php the_title(); ?>
+                    </h1>
+                    <?php the_content(); ?>
+                <?php
+                    endwhile; ?>
+                <?php
+                else:
+                     ?>
+                <?php
+                endif; ?>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php get_footer(); ?>
