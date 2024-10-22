@@ -37,6 +37,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // init Swiper:
+    const swiperAliados = new Swiper(".swiper-aliados", {
+        // configure Swiper to use modules
+        modules: [Navigation, Pagination, Autoplay],
+
+        // Optional parameters
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        direction: "horizontal",
+        loop: false,
+        allowTouchMove: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+
+        // breakpoints
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            992: {
+                slidesPerView: 8,
+                spaceBetween: 30,
+            },
+        },
+
+        // if we need navigation
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+
+    // init Swiper:
     const swiperGaleria = new Swiper(".swiper-galeria", {
         // configure Swiper to use modules
         modules: [Navigation, Pagination, Autoplay],

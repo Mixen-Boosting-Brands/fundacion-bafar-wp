@@ -48,9 +48,93 @@
         <div class="row">
             <div class="col-12">
                 <div class="container-aliados">
-                    <img src="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/aliados/aliados.png" alt="" class="img-fluid">
+                    <!-- Slider main container -->
+                    <div class="swiper swiper-aliados">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/1.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/2.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/3.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/4.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/5.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/6.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/7.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/8.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/1.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/2.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/3.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/4.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/5.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/6.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/7.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/aliados/8.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
