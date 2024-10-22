@@ -391,6 +391,12 @@ header {
             margin: 0 auto;
         }
     }
+
+    .swiper-aliados {
+        .swiper-wrapper {
+            align-items: center;
+        }
+    }
 }
 
 $jumbotron-bg-images: (
