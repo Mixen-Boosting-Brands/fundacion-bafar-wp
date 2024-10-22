@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         allowTouchMove: true,
         slidesPerView: 1,
         spaceBetween: 0,
+        grabCursor: true,
 
         // breakpoints
         breakpoints: {
