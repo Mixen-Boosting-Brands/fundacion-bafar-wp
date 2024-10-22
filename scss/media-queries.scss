@@ -252,6 +252,14 @@
 
 // X-Large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) {
+    #figuras {
+        .figura {
+            h1 {
+                @include font-size(1rem);
+            }
+        }
+    }
+
     #por-que {
         .educational-football-program {
             &::before {
@@ -305,6 +313,14 @@
 
 // XX-Large devices (larger desktops, 1400px and up)
 @include media-breakpoint-up(xxl) {
+    #figuras {
+        .figura {
+            h1 {
+                @include font-size(1.3rem);
+            }
+        }
+    }
+
     #por-que {
         .educational-football-program {
             &::before {
