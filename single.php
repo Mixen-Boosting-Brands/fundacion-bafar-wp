@@ -5,7 +5,7 @@
         <div class="row">
             <div class="mb-5 col-lg-6 my-lg-auto order-lg-2 text-end">
                 <?php the_post_thumbnail("thumb-noticia-grande", [
-                    "class" => "img-fluid",
+                    "class" => "thumb-noticia-grande img-fluid",
                 ]); ?>
             </div>
             <div
@@ -38,7 +38,7 @@
                     while (have_posts()):
                         the_post(); ?>
                     <?php the_post_thumbnail("thumb-noticia-grande", [
-                        "class" => "img-fluid",
+                        "class" => "img-fluid mb-4",
                     ]); ?>
                     <h1>
                         <?php the_title(); ?>
