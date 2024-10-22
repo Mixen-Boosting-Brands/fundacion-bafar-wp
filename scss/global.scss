@@ -433,7 +433,7 @@ $index-jumbotron: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            opacity: 0;
+            opacity: 1;
             @include transition(ease, 0.3s);
         }
 

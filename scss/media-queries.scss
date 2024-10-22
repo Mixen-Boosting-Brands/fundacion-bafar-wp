@@ -59,6 +59,14 @@
         }
     }
 
+    #figuras {
+        .figura {
+            .overlay {
+                opacity: 0;
+            }
+        }
+    }
+
     #por-que {
         background-position: top;
         margin-top: -60px;
