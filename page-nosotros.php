@@ -127,7 +127,7 @@ get_header(); ?>
                     deporte, educación, valores, salud y cuidado del
                     medio ambiente, impulsando una mejor calidad de vida
                     de personas que viven en situación de riesgo, para
-                    formar mejores mexicanos.
+                    formar <strong>Mejores Mexicanos</strong>.
                 </p>
             </div>
         </div>
@@ -151,12 +151,7 @@ get_header(); ?>
                 class="col-10 offset-1 col-lg-12 offset-lg-0 text-center"
             >
                 <p>
-                    Contribuir a la reconstrucción del tejido social, a
-                    través de programas integrales de: alimentación,
-                    deporte, educación, valores, salud y cuidado del
-                    medio ambiente, impulsando una mejor calidad de vida
-                    de personas que viven en situación de riesgo, para
-                    formar mejores mexicanos.
+                    Contribuimos a la formación de mejores mexicanos, que consolidan una sociedad más participativa, sana, educada y próspera.
                 </p>
             </div>
         </div>
