@@ -111,7 +111,7 @@
                             <a class="anchor" id="btn-nav-4" href="<?php echo get_permalink(
                                 8
                             ); ?>"
-                                >Galería</a
+                                >Galerías</a
                             >
                         </li>
                         <li>
@@ -194,7 +194,7 @@
                                 <li class="list-inline-item">
                                     <a href="<?php echo get_permalink(
                                         8
-                                    ); ?>">Galería</a>
+                                    ); ?>">Galerías</a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="<?php echo get_permalink(
