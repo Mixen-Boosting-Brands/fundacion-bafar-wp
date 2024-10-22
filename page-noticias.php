@@ -48,34 +48,52 @@ get_header(); ?>
                         >Noticia</span
                     >
                 </h1>
-                <a href="#">
-                    <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/noticias/thumb-noticia-big.png"
-                        alt=""
-                        class="img-fluid"
-                    />
-                </a>
-                <a href="#">
-                    <h2>
-                        Inicia programa Escuelas Sociodeportivas en
-                        Camargo
-                    </h2>
-                </a>
-                <div class="row">
-                    <div class="col-8">
-                        <p>
-                            Worem ipsum dolor sit amet,
-                            consecteturadipiscing elit. Nunc vulputate
-                            libero et velit interdum, ac aliquet odio
-                            mattis.
-                        </p>
+                <?php
+                // Custom query to get the newest post from "Noticias" category
+                $args = [
+                    "post_type" => "post",
+                    "posts_per_page" => 1,
+                    "category_name" => "Noticias",
+                    "orderby" => "date",
+                    "order" => "DESC",
+                ];
+
+                $noticias_query = new WP_Query($args);
+
+                if ($noticias_query->have_posts()):
+                    while ($noticias_query->have_posts()):
+                        $noticias_query->the_post(); ?>
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail("thumb-noticia-grande", [
+                            "class" => "img-fluid",
+                        ]); ?>
+                    </a>
+                    <a href="<?php the_permalink(); ?>">
+                        <h2>
+                            <?php the_title(); ?>
+                        </h2>
+                    </a>
+                    <div class="row">
+                        <div class="col-8">
+                            <p>
+                                <?php the_excerpt(); ?>
+                            </p>
+                        </div>
+                        <div class="col-4 my-auto text-end">
+                            <a class="btn btn-primary" href="<?php the_permalink(); ?>">Leer más</a>
+                        </div>
                     </div>
-                    <div class="col-4 my-auto text-end">
-                        <a class="btn btn-primary" href="#">Leer más</a>
-                    </div>
-                </div>
+                <?php
+                    endwhile; ?>
+                <?php
+                else:
+                     ?>
+                <?php
+                endif;
+                wp_reset_postdata();
+
+// Reset post data
+?>
             </div>
         </div>
         <div
