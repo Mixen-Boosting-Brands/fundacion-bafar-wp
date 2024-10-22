@@ -26,7 +26,7 @@ get_header(); ?>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <a class="anchor arrow" href=".after-jumbotron">
+                        <a class="anchor arrow" href="#videos">
                             <i
                                 class="fa-solid fa-arrow-down-long moveUpDown"
                             ></i>
