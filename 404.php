@@ -13,11 +13,9 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <a class="anchor arrow" href=".after-jumbotron">
-                            <i
-                                class="fa-solid fa-arrow-down-long moveUpDown"
-                            ></i>
-                        </a>
+                        <a class="btn btn-secondary" href="<?php echo esc_url(
+                            home_url()
+                        ); ?>">Regresar al inicio</a>
                     </div>
                 </div>
             </div>
