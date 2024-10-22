@@ -13,7 +13,7 @@
             >
                 <div class="row mb-5">
                     <div class="col-12">
-                        <h1 class="fw-bold">Noticias</h1>
+                        <h1 class="fw-bold"><?php the_title(); ?></h1>
                     </div>
                 </div>
                 <div class="row">
