@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Galería
+    Template Name: Galerías
     */
 get_header(); ?>
 
@@ -21,7 +21,7 @@ get_header(); ?>
             >
                 <div class="row mb-5">
                     <div class="col-12">
-                        <h1 class="fw-bold">Galería</h1>
+                        <h1 class="fw-bold">Galerías</h1>
                     </div>
                 </div>
                 <div class="row">
