@@ -127,62 +127,44 @@
             <div class="col-12">
                 <div class="swiper swiper-logros">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div
-                                class="card mb-3"
-                            >
-                                <a href="#"></a>
-                                <div class="card-body">
-                                    <h2 class="card-title"><span>Galería</span> <i class="fa-solid fa-circle-arrow-right"></i></h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut magnam perferendis mollitia dolores odit distinctio ea a corporis? Fuga accusantium eius ad? Ipsa non doloremque quas provident, eum error!</p>
+                        <?php
+                        $args = [
+                            "post_type" => "logros",
+                            "posts_per_page" => -1, // Retrieve all posts
+                        ];
+
+                        $logros_query = new WP_Query($args);
+
+                        if ($logros_query->have_posts()):
+                            while ($logros_query->have_posts()):
+                                $logros_query->the_post(); ?>
+                            <div class="swiper-slide">
+                                <div
+                                    class="card mb-3"
+                                >
+                                    <a href="<?php the_permalink(); ?>"></a>
+                                    <div class="card-body">
+                                        <h2 class="card-title"><span><?php the_title(); ?></span> <i class="fa-solid fa-circle-arrow-right"></i></h2>
+                                        <p class="card-text"><?php the_excerpt(); ?></p>
+                                    </div>
+                                    <?php the_post_thumbnail(
+                                        "thumb-noticia-grande",
+                                        [
+                                            "class" =>
+                                                "thumb-logro card-img-bottom",
+                                        ]
+                                    ); ?>
                                 </div>
-                                <img src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/thumb-logro.png" class="card-img-bottom" alt="...">
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div
-                                class="card mb-3"
-                            >
-                                <a href="#"></a>
-                                <div class="card-body">
-                                    <h2 class="card-title"><span>Videos</span> <i class="fa-solid fa-circle-arrow-right"></i></h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut magnam perferendis mollitia dolores odit distinctio ea a corporis? Fuga accusantium eius ad? Ipsa non doloremque quas provident, eum error!</p>
-                                </div>
-                                <img src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/thumb-logro.png" class="card-img-bottom" alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div
-                                class="card mb-3"
-                            >
-                                <a href="#"></a>
-                                <div class="card-body">
-                                    <h2 class="card-title"><span>Noticias</span> <i class="fa-solid fa-circle-arrow-right"></i></h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut magnam perferendis mollitia dolores odit distinctio ea a corporis? Fuga accusantium eius ad? Ipsa non doloremque quas provident, eum error!</p>
-                                </div>
-                                <img src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/thumb-logro.png" class="card-img-bottom" alt="...">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div
-                                class="card mb-3"
-                            >
-                                <a href="#"></a>
-                                <div class="card-body">
-                                    <h2 class="card-title"><span>Voluntariado</span> <i class="fa-solid fa-circle-arrow-right"></i></h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut magnam perferendis mollitia dolores odit distinctio ea a corporis? Fuga accusantium eius ad? Ipsa non doloremque quas provident, eum error!</p>
-                                </div>
-                                <img src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/thumb-logro.png" class="card-img-bottom" alt="...">
-                            </div>
-                        </div>
+                        <?php
+                            endwhile;
+                            wp_reset_postdata(); // Reset the post data
+                        else:
+                             ?>
+                            <p>No se encontraron logros.</p>
+                        <?php
+                        endif;
+                        ?>
                     </div>
                     <div class="swiper-buttons">
                         <div class="swiper-button-next">
