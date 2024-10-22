@@ -63,7 +63,7 @@
             <div class="col-lg-2 offset-lg-1">
                 <div id="fig-1" class="figura fig-up mb-4 mb-lg-0">
                     <div class="overlay">
-                        <h1>Centro de acopio</h1>
+                        <h1>Escuelas Sociodeportivas</h1>
                     </div>
                 </div>
             </div>
@@ -77,21 +77,21 @@
             <div class="col-lg-2">
                 <div id="fig-3" class="figura fig-up mb-4 mb-lg-0">
                     <div class="overlay">
-                        <h1>Centro de acopio</h1>
+                        <h1>Jornadas médicas</h1>
                     </div>
                 </div>
             </div>
             <div class="col-lg-2">
                 <div id="fig-4" class="figura fig-down mb-4 mb-lg-0">
                     <div class="overlay">
-                        <h1>Centro de acopio</h1>
+                        <h1>Voluntariado</h1>
                     </div>
                 </div>
             </div>
             <div class="col-lg-2">
                 <div id="fig-5" class="figura fig-up mb-4 mb-lg-0">
                     <div class="overlay">
-                        <h1>Centro de acopio</h1>
+                        <h1>Guardería</h1>
                     </div>
                 </div>
             </div>
