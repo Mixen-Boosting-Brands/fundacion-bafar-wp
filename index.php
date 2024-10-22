@@ -144,7 +144,7 @@
 <section id="figuras" class="py-30">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 col-xl-2 offset-lg-1">
+            <div class="col-md-6 col-xl-2 offset-xl-1">
                 <div id="fig-1" class="figura fig-up mb-4 mb-lg-0">
                     <div class="overlay">
                         <h1>Escuelas Sociodeportivas</h1>
