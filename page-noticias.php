@@ -165,6 +165,7 @@ get_header(); ?>
                     </div>
 
                     <?php // Close the row after every two posts
+
                     if ($counter % 2 == 0) {
                         echo "</div>"; // Close the inner row
                     }
@@ -186,7 +187,12 @@ get_header(); ?>
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <a class="btn btn-primary" href="#">Ver más</a>
+                <a class="btn btn-primary" href="<?php
+                $category = get_category_by_slug("noticias");
+                if ($category) {
+                    echo esc_url(get_category_link($category->term_id));
+                }
+                ?>">Ver más</a>
             </div>
         </div>
     </div>
