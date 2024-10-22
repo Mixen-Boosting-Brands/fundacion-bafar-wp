@@ -30,7 +30,7 @@ if (function_exists("add_theme_support")) {
     add_image_size("custom-size", 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
     add_image_size("thumb-noticia-grande", 1290, 447, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-noticia-grande');
     add_image_size("thumb-noticia-chico", 276, 261, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-noticia-chico');
-    add_image_size("thumb-noticia-chico", 372, 281, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-logro);
+    add_image_size("thumb-logro", 372, 281, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-logro);
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use.
     /*add_theme_support('custom-background', array(
