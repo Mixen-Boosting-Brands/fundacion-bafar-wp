@@ -201,7 +201,7 @@
             <i class="fab fa-whatsapp whatsapp-icon"></i>
         </a -->
 
-        <!-- Modal -->
+        <!-- Modal Imagen -->
         <div class="modal fade" id="modal-image" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
@@ -215,6 +215,32 @@
                     </div>
                     <div class="modal-body text-center">
                         <img src="" alt="" class="img-fluid rounded-4" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Imagen -->
+        <div class="modal fade" id="modal-video" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="ratio ratio-16x9">
+                            <iframe
+                                src=""
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
