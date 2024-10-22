@@ -142,7 +142,7 @@ get_header(); ?>
                 class="col-10 offset-1 col-lg-12 offset-lg-0 text-center"
             >
                 <h1>
-                    <span class="fw-bold">Vision</span>
+                    <span class="fw-bold">Visión</span>
                 </h1>
             </div>
         </div>
