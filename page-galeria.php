@@ -131,7 +131,7 @@ else:
 endif;
 ?>
 
-<section id="slider-mas-contenido">
+<!-- section id="slider-mas-contenido">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -298,6 +298,6 @@ endif;
             </div>
         </div>
     </div>
-</section>
+</section -->
 
 <?php get_footer(); ?>
