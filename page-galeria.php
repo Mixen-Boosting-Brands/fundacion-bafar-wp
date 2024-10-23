@@ -82,9 +82,13 @@ if ($galerias_query->have_posts()):
                                 <div
                                     class="bg-galeria"
                                     style="
-                                        background: url(&quot;<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/galerias/1.png&quot;)
+                                        background: url(&quot;<?php the_post_thumbnail(
+                                            "thumb-noticia-grande",
+                                            [
+                                                "class" =>
+                                                    "thumb-logro card-img-bottom",
+                                            ]
+                                        ); ?>&quot;)
                                             no-repeat;
                                     "
                                 >
@@ -93,119 +97,13 @@ if ($galerias_query->have_posts()):
                                             href="javascript:void(0)"
                                             data-bs-toggle="modal"
                                             data-bs-target="#modal-image"
-                                            data-bs-image="<?php echo esc_url(
-                                                get_template_directory_uri()
-                                            ); ?>/assets/images/galerias/1.png"
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div
-                                    class="bg-galeria"
-                                    style="
-                                        background: url(&quot;<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/galerias/2.png&quot;)
-                                            no-repeat;
-                                    "
-                                >
-                                    <div class="overlay">
-                                        <a
-                                            href="javascript:void(0)"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modal-image"
-                                            data-bs-image="<?php echo esc_url(
-                                                get_template_directory_uri()
-                                            ); ?>/assets/images/galerias/2.png"
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div
-                                    class="bg-galeria"
-                                    style="
-                                        background: url(&quot;<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/galerias/3.png&quot;)
-                                            no-repeat;
-                                    "
-                                >
-                                    <div class="overlay">
-                                        <a
-                                            href="javascript:void(0)"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modal-image"
-                                            data-bs-image="<?php echo esc_url(
-                                                get_template_directory_uri()
-                                            ); ?>/assets/images/galerias/3.png"
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div
-                                    class="bg-galeria"
-                                    style="
-                                        background: url(&quot;<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/galerias/1.png&quot;)
-                                            no-repeat;
-                                    "
-                                >
-                                    <div class="overlay">
-                                        <a
-                                            href="javascript:void(0)"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modal-image"
-                                            data-bs-image="<?php echo esc_url(
-                                                get_template_directory_uri()
-                                            ); ?>/assets/images/galerias/1.png"
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div
-                                    class="bg-galeria"
-                                    style="
-                                        background: url(&quot;<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/galerias/2.png&quot;)
-                                            no-repeat;
-                                    "
-                                >
-                                    <div class="overlay">
-                                        <a
-                                            href="javascript:void(0)"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modal-image"
-                                            data-bs-image="<?php echo esc_url(
-                                                get_template_directory_uri()
-                                            ); ?>/assets/images/galerias/2.png"
-                                        ></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div
-                                    class="bg-galeria"
-                                    style="
-                                        background: url(&quot;<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/galerias/3.png&quot;)
-                                            no-repeat;
-                                    "
-                                >
-                                    <div class="overlay">
-                                        <a
-                                            href="javascript:void(0)"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modal-image"
-                                            data-bs-image="<?php echo esc_url(
-                                                get_template_directory_uri()
-                                            ); ?>/assets/images/galerias/3.png"
+                                            data-bs-image="<?php the_post_thumbnail(
+                                                "thumb-noticia-grande",
+                                                [
+                                                    "class" =>
+                                                        "thumb-logro card-img-bottom",
+                                                ]
+                                            ); ?>"
                                         ></a>
                                     </div>
                                 </div>
