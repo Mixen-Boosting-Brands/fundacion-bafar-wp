@@ -81,6 +81,7 @@ if ($galerias_query->have_posts()):
                             <div class="swiper-wrapper">
                                 <?php while (have_rows("galeria")):
 
+                                    echo "Found galeria rows!";
                                     the_row();
                                     $imagen = get_sub_field("imagen");
                                     // Get the image URL instead of the full HTML tag
