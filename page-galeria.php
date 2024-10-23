@@ -83,13 +83,17 @@ if ($galerias_query->have_posts()):
 
                                     the_row();
                                     $imagen = get_sub_field("imagen");
+                                    // Get the image URL instead of the full HTML tag
+                                    $imagen_url = wp_get_attachment_image_url(
+                                        $imagen,
+                                        "full"
+                                    );
                                     ?>
                                     <div class="swiper-slide">
                                         <div
                                             class="bg-galeria"
-                                            style=" background: url('<?php echo wp_get_attachment_image(
-                                                $imagen,
-                                                "full"
+                                            style=" background: url('<?php echo esc_url(
+                                                $imagen_url
                                             ); ?>') no-repeat;"
                                         >
                                             <div class="overlay">
@@ -97,9 +101,8 @@ if ($galerias_query->have_posts()):
                                                     href="javascript:void(0)"
                                                     data-bs-toggle="modal"
                                                     data-bs-target="#modal-image"
-                                                    data-bs-image="<?php echo wp_get_attachment_image(
-                                                        $imagen,
-                                                        "full"
+                                                    data-bs-image="<?php echo esc_url(
+                                                        $imagen_url
                                                     ); ?>"
                                                 ></a>
                                             </div>
