@@ -87,13 +87,10 @@ if ($galerias_query->have_posts()):
                                     <div class="swiper-slide">
                                         <div
                                             class="bg-galeria"
-                                            style="
-                                                background: url(&quot;<?php echo wp_get_attachment_image(
-                                                    $imagen,
-                                                    "full"
-                                                ); ?>&quot;)
-                                                    no-repeat;
-                                            "
+                                            style=" background: url('<?php echo wp_get_attachment_image(
+                                                $imagen,
+                                                "full"
+                                            ); ?>') no-repeat;"
                                         >
                                             <div class="overlay">
                                                 <a
