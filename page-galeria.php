@@ -68,10 +68,7 @@ if ($galerias_query->have_posts()):
                     class="col-10 offset-1 col-lg-12 offset-lg-0 text-center"
                 >
                     <h1 id="titulo-ultima-noticia">
-                        <span class="fw-light">Torneo</span>
-                        <span class="fw-bold color-secondary comentario"
-                            >Úne-t</span
-                        >
+                        <?php the_title(); ?>
                     </h1>
                 </div>
             </div>
