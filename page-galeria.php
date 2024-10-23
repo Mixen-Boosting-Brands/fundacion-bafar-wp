@@ -73,52 +73,55 @@ if ($galerias_query->have_posts()):
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="swiper swiper-galeria">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div
-                                    class="bg-galeria"
-                                    style="
-                                        background: url(&quot;<?php the_post_thumbnail(
-                                            "thumb-noticia-grande",
-                                            [
-                                                "class" =>
-                                                    "thumb-logro card-img-bottom",
-                                            ]
-                                        ); ?>&quot;)
-                                            no-repeat;
-                                    "
-                                >
-                                    <div class="overlay">
-                                        <a
-                                            href="javascript:void(0)"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modal-image"
-                                            data-bs-image="<?php the_post_thumbnail(
-                                                "thumb-noticia-grande",
-                                                [
-                                                    "class" =>
-                                                        "thumb-logro card-img-bottom",
-                                                ]
-                                            ); ?>"
-                                        ></a>
+        <?php if (have_rows("galeria")): ?>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="swiper swiper-galeria">
+                            <div class="swiper-wrapper">
+                                <?php while (have_rows("galeria")):
+
+                                    the_row();
+                                    $imagen = get_sub_field("imagen");
+                                    ?>
+                                    <div class="swiper-slide">
+                                        <div
+                                            class="bg-galeria"
+                                            style="
+                                                background: url(&quot;<?php echo wp_get_attachment_image(
+                                                    $imagen,
+                                                    "full"
+                                                ); ?>&quot;)
+                                                    no-repeat;
+                                            "
+                                        >
+                                            <div class="overlay">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#modal-image"
+                                                    data-bs-image="<?php echo wp_get_attachment_image(
+                                                        $imagen,
+                                                        "full"
+                                                    ); ?>"
+                                                ></a>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                <?php
+                                endwhile; ?>
                             </div>
-                        </div>
-                        <div class="swiper-button-next">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-                        <div class="swiper-button-prev">
-                            <i class="fa-solid fa-arrow-left"></i>
+                            <div class="swiper-button-next">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php endif; ?>
     </section>
 <?php
     endwhile;
