@@ -83,6 +83,11 @@ if ($galerias_query->have_posts()):
 
                                     the_row();
                                     $imagen = get_sub_field("imagen");
+                                    if ($imagen) {
+                                        echo "Image URL: " . esc_url($imagen);
+                                    } else {
+                                        echo "No image found";
+                                    }
                                     $imagen_url = $imagen;
 
                                     // Since the return format is set to URL, directly use it
