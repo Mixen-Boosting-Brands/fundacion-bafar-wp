@@ -11,7 +11,7 @@
                         <h2 class="mb-0">Fundación</h2>
                         <h1 class="fw-bold">Grupo Bafar</h1>
                         <p>Una institución orientada a la formación de los mejores mexicanos.</p>
-                        <a href="#" class="btn btn-primary">Ver más</a>
+                        <a href="#aliados" class="btn btn-primary">Ver más</a>
                         <img
                             src="<?php echo esc_url(
                                 get_template_directory_uri()
