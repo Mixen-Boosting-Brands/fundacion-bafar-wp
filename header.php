@@ -58,13 +58,18 @@
         <div class="redes-sociales">
             <ul class="list-unstyled mb-0">
                 <li>
-                    <a href="#" target="_blank">
+                    <a href="https://www.facebook.com/fundacion.bafar" target="_blank">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank">
+                    <a href="https://x.com/fundgrupobafar" target="_blank">
                         <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/fundaciongrupobafar" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
                     </a>
                 </li>
             </ul>
@@ -132,13 +137,18 @@
                 <div id="social">
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href="#" target="_blank">
+                            <a href="https://www.facebook.com/fundacion.bafar" target="_blank">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#" target="_blank">
+                            <a href="https://x.com/fundgrupobafar" target="_blank">
                                 <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/fundaciongrupobafar" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
                     </ul>
