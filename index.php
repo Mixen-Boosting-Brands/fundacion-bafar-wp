@@ -142,18 +142,15 @@
                                 <div
                                     class="card mb-3"
                                 >
-                                    <a href="<?php the_permalink(); ?>"></a>
+                                    <!-- a href="<?php the_permalink(); ?>"></a -->
                                     <div class="card-body">
                                         <h2 class="card-title"><span><?php the_title(); ?></span> <i class="fa-solid fa-circle-arrow-right"></i></h2>
                                         <p class="card-text"><?php the_excerpt(); ?></p>
                                     </div>
-                                    <?php the_post_thumbnail(
-                                        "thumb-noticia-grande",
-                                        [
-                                            "class" =>
-                                                "thumb-logro card-img-bottom",
-                                        ]
-                                    ); ?>
+                                    <?php the_post_thumbnail("thumb-logro", [
+                                        "class" =>
+                                            "thumb-logro card-img-bottom",
+                                    ]); ?>
                                 </div>
                             </div>
                         <?php
