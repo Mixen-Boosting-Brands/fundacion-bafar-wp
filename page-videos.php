@@ -55,67 +55,7 @@ if ($videos_query->have_posts()): ?>
             get_template_directory_uri()
         ); ?>/assets/images/bg-videos.png"
     >
-        <?php
-        while ($videos_query->have_posts()):
-            $galerias_query->the_post(); ?>
-            <div class="container-fluid">
-                <div class="row mb-5">
-                    <div
-                        class="col-10 offset-1 col-lg-12 offset-lg-0 text-center"
-                    >
-                        <h1 id="titulo-ultima-noticia">
-                            <?php the_title(); ?>
-                        </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="swiper swiper-videos">
-                        <div class="swiper-wrapper">
-                            <?php while (have_rows("videos")):
-
-                                the_row();
-                                $videoID = get_sub_field("video");
-                                ?>
-                                <div class="swiper-slide">
-                                    <div class="overlay">
-                                        <a
-                                            href="javascript:void(0)"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modal-video"
-                                            data-bs-video-src="https://www.youtube.com/embed/<?php echo $videoID; ?>"
-                                        ></a>
-                                    </div>
-                                    <div class="card text-bg-light mb-3 rounded-4">
-                                        <div class="card-body">
-                                            <div class="ratio ratio-16x9">
-                                                <iframe
-                                                    src="https://www.youtube.com/embed/<?php echo $videoID; ?>"
-                                                    frameborder="0"
-                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                    allowfullscreen
-                                                ></iframe>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php
-                            endwhile; ?>
-                        </div>
-                        <div class="swiper-button-next">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-                        <div class="swiper-button-prev">
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <?php
-        endwhile;
-        wp_reset_postdata();
-
-    // Reset the post data
-    ?>
+        <p>Test</p>
     </section>
 <?php else: ?>
     <p>No se encontraron galerías.</p>
