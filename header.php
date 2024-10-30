@@ -109,7 +109,7 @@
                             <a class="anchor" id="btn-nav-3" href="<?php echo get_permalink(
                                 10
                             ); ?>"
-                                >Prensa</a
+                                >Noticias</a
                             >
                         </li>
                         <li>
@@ -199,7 +199,7 @@
                                 <li class="list-inline-item">
                                     <a href="<?php echo get_permalink(
                                         10
-                                    ); ?>">Prensa</a>
+                                    ); ?>">Noticias</a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="<?php echo get_permalink(
