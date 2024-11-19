@@ -55,7 +55,7 @@ get_header(); ?>
                         get_template_directory_uri()
                     ); ?>/assets/images/thumb-quienes-somos-1.png"
                     alt=""
-                    class="img-fluid"
+                    class="rounded img-fluid"
                 />
             </div>
             <div class="col-lg-6 my-auto">
