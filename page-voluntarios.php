@@ -13,7 +13,7 @@ get_header(); ?>
                         get_template_directory_uri()
                     ); ?>/assets/images/jumbotron/thumb-voluntarios.png"
                     alt=""
-                    class="img-fluid"
+                    class="thumb-noticia-grande img-fluid"
                 />
             </div>
             <div
