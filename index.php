@@ -125,7 +125,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="swiper swiper-logros">
+                <div class="swiper swiper-logros" style="z-index: 2;">
                     <div class="swiper-wrapper">
                         <?php
                         $args = [
