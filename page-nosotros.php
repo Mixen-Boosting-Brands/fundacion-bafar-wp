@@ -21,8 +21,8 @@ get_header(); ?>
             >
                 <div class="row mb-5">
                     <div class="col-12">
-                        <h2>Comprometidos por integrar</h2>
-                        <h1 class="fw-bold">¡Mejores mexicanos!</h1>
+                        <h2>Comprometidos por formar</h2>
+                        <h1 class="fw-bold">Mejores mexicanos</h1>
                     </div>
                 </div>
                 <div class="row">
@@ -88,8 +88,7 @@ get_header(); ?>
                     resultados positivos para los mexicanos.
                 </p>
                 <h6>
-                    Fundación Grupo Bafar: Comprometidos por integrar
-                    ¡Mejores mexicanos!
+                    Fundación Grupo Bafar: Comprometidos por formar <strong>mejores mexicanos</strong>
                 </h6>
             </div>
             <div class="col-lg-4 my-auto text-center">
@@ -122,12 +121,7 @@ get_header(); ?>
                 class="col-10 offset-1 col-lg-12 offset-lg-0 text-center"
             >
                 <p>
-                    Contribuir a la reconstrucción del tejido social, a
-                    través de programas integrales de: alimentación,
-                    deporte, educación, valores, salud y cuidado del
-                    medio ambiente, impulsando una mejor calidad de vida
-                    de personas que viven en situación de riesgo, para
-                    formar <strong>Mejores Mexicanos</strong>.
+                    Contribuir a la reconstrucción del tejido social, a través de programas integrales de: alimentación, deporte, educación, valores, salud y cuidado del medio ambiente, impulsando una mejor calidad de vida de personas que viven en situación de vulnerabilidad, para formar <strong>mejores mexicanos</strong>.
                 </p>
             </div>
         </div>
