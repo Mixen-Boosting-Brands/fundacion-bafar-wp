@@ -73,6 +73,10 @@
         <div class="row">
             <div class="col-md-6 col-xl-2 offset-xl-1">
                 <div id="fig-1" class="figura fig-up mb-4 mb-xl-0">
+                    <a href="<?php
+                    $permalink = get_permalink(262);
+                    echo $permalink;
+                    ?>"></a>
                     <div class="overlay">
                         <h1>Escuelas Sociodeportivas</h1>
                     </div>
@@ -80,6 +84,10 @@
             </div>
             <div class="col-md-6 col-xl-2">
                 <div id="fig-2" class="figura fig-down mb-4 mb-xl-0">
+                    <a href="<?php
+                    $permalink = get_permalink(262);
+                    echo $permalink;
+                    ?>"></a>
                     <div class="overlay">
                         <h1>Centro de acopio</h1>
                     </div>
@@ -87,6 +95,10 @@
             </div>
             <div class="col-md-6 col-xl-2">
                 <div id="fig-3" class="figura fig-up mb-4 mb-xl-0">
+                    <a href="<?php
+                    $permalink = get_permalink(262);
+                    echo $permalink;
+                    ?>"></a>
                     <div class="overlay">
                         <h1>Jornadas médicas</h1>
                     </div>
@@ -94,6 +106,10 @@
             </div>
             <div class="col-md-6 col-xl-2">
                 <div id="fig-4" class="figura fig-down mb-4 mb-xl-0">
+                    <a href="<?php
+                    $permalink = get_permalink(262);
+                    echo $permalink;
+                    ?>"></a>
                     <div class="overlay">
                         <h1>Voluntariado</h1>
                     </div>
@@ -101,6 +117,10 @@
             </div>
             <div class="col-md-6 col-xl-2">
                 <div id="fig-5" class="figura fig-up mb-4 mb-xl-0">
+                    <a href="<?php
+                    $permalink = get_permalink(262);
+                    echo $permalink;
+                    ?>"></a>
                     <div class="overlay">
                         <h1>Guardería</h1>
                     </div>
