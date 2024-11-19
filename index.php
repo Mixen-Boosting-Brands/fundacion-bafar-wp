@@ -85,7 +85,7 @@
             <div class="col-md-6 col-xl-2">
                 <div id="fig-2" class="figura fig-down mb-4 mb-xl-0">
                     <a href="<?php
-                    $permalink = get_permalink(262);
+                    $permalink = get_permalink(266);
                     echo $permalink;
                     ?>"></a>
                     <div class="overlay">
@@ -96,7 +96,7 @@
             <div class="col-md-6 col-xl-2">
                 <div id="fig-3" class="figura fig-up mb-4 mb-xl-0">
                     <a href="<?php
-                    $permalink = get_permalink(262);
+                    $permalink = get_permalink(272);
                     echo $permalink;
                     ?>"></a>
                     <div class="overlay">
@@ -107,7 +107,7 @@
             <div class="col-md-6 col-xl-2">
                 <div id="fig-4" class="figura fig-down mb-4 mb-xl-0">
                     <a href="<?php
-                    $permalink = get_permalink(262);
+                    $permalink = get_permalink(276);
                     echo $permalink;
                     ?>"></a>
                     <div class="overlay">
@@ -118,7 +118,7 @@
             <div class="col-md-6 col-xl-2">
                 <div id="fig-5" class="figura fig-up mb-4 mb-xl-0">
                     <a href="<?php
-                    $permalink = get_permalink(262);
+                    $permalink = get_permalink(280);
                     echo $permalink;
                     ?>"></a>
                     <div class="overlay">
