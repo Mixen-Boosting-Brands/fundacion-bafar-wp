@@ -255,6 +255,11 @@ header {
     text-transform: uppercase;
     z-index: 2;
 
+    h1,
+    h2 {
+        font-family: "eurostile_bqregular", sans-serif;
+    }
+
     h1 {
         @include font-size(3rem);
     }

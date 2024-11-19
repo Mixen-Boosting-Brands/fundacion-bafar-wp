@@ -7,6 +7,15 @@ $fa-font-path: "../fonts/webfonts" !default;
 @import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
 
 @font-face {
+    font-family: "eurostile_bqregular";
+    src:
+        url("../fonts/eurostilebq-boldextended-webfont.woff2") format("woff2"),
+        url("../fonts/eurostilebq-boldextended-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "circular_stdbold";
     src:
         url("../fonts/circularstd-bold-webfont.woff2") format("woff2"),
