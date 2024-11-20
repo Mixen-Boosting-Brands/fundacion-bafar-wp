@@ -155,6 +155,13 @@
                                             <a href="mailto:dcontreras@bafar.com.mx">dcontreras@bafar.com.mx</a>
                                         </small>
                                     </li>
+                                    <li class="list-inline-item">
+                                        <small>
+                                            Lic. Susana Guardado M.<br>
+                                            Centro de Acopio<br>
+                                            <a href="mailto:suguardado@bafar.com.mx">suguardado@bafar.com.mx</a>
+                                        </small>
+                                    </li>
                                 </ul>
                                 <address>
                                     Km 7.5 Carretera a Cuauhtémoc, Col. Las Ánimas. C.P. 31450, Chihuahua, Chih. México<br>
