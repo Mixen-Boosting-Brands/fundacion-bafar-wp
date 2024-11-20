@@ -7,6 +7,7 @@ body {
 
 body {
     font-family: "circular_stdbook", sans-serif;
+    @include font-size(1.2rem);
     position: relative;
 
     .redes-sociales {
