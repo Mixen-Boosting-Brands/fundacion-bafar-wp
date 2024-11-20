@@ -39,7 +39,7 @@
 <section id="aliados" class="py-30">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 text-center">
                 <h1>Nuestros Aliados Sociales</h1>
             </div>
         </div>
