@@ -10,16 +10,16 @@
                     <div class="col-12">
                         <h2 class="mb-0">Fundación</h2>
                         <h1 class="fw-bold">Grupo Bafar</h1>
-                        <p>Una institución orientada a la formación de mejores mexicanos.</p>
-                        <a href="#aliados" class="btn btn-primary">Ver más</a>
+                        <p class="display-inline">Una institución orientada a la formación de mejores mexicanos.</p>
                         <img
                             src="<?php echo esc_url(
                                 get_template_directory_uri()
-                            ); ?>/assets/images/jumbotron/thumb-por-mejores-mexicanos.png"
+                            ); ?>/assets/images/jumbotron/thumb-mejores-mexicanos.png"
                             alt=""
                             id="pmm"
                             class="img-fluid"
                         />
+                        <a href="#aliados" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
