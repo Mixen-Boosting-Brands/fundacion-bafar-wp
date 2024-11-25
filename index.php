@@ -19,7 +19,9 @@
                             id="pmm"
                             class="img-fluid"
                         />
-                        <a href="#aliados" class="btn btn-primary d-inline-block">Ver más</a>
+                        <div class="d-block mt-3">
+                            <a href="#aliados" class="btn btn-primary">Ver más</a>
+                        </div>
                     </div>
                 </div>
             </div>
