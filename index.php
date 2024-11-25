@@ -29,7 +29,7 @@
                         get_template_directory_uri()
                     ); ?>/assets/images/jumbotron/thumb-jumbotron-home.png"
                     alt=""
-                    class="img-fluid"
+                    class="img-fluid mt-3"
                 />
             </div>
         </div>
