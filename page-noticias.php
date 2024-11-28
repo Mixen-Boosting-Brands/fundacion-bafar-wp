@@ -123,7 +123,7 @@ get_header(); ?>
 
                     // Determine the class based on the counter
                     $class = in_array($counter, [1, 4, 5, 8])
-                        ? "chico"
+                        ? "grande" // originalmente era "chico"
                         : "grande";
 
                     // Open a new row for every two posts
