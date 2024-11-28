@@ -28,7 +28,7 @@ if (function_exists("add_theme_support")) {
     add_image_size("medium", 250, "", true); // Medium Thumbnail.
     add_image_size("small", 120, "", true); // Small Thumbnail.
     add_image_size("custom-size", 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
-    add_image_size("thumb-noticia-grande", 1290, 447, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-noticia-grande');
+    add_image_size("thumb-noticia-grande", 968, 706, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-noticia-grande');
     add_image_size("thumb-noticia-chico", 276, 261, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-noticia-chico');
     add_image_size("thumb-logro", 372, 281, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-logro);
 
