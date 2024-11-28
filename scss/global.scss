@@ -6,6 +6,7 @@ body {
 }
 
 body {
+    color: $primary;
     font-family: "circular_stdbook", sans-serif;
     @include font-size(1.2rem);
     position: relative;
@@ -974,7 +975,17 @@ $index-jumbotron: 1;
     // @include background("../images/bg-quienes-somos.png", center, cover);
     margin-top: 30px;
     position: relative;
+    text-align: justify;
     z-index: 1;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold;
+    }
 
     ul {
         line-height: 2.2;
