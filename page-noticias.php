@@ -98,7 +98,7 @@ get_header(); ?>
         </div>
         <div
             class="row small mb-5"
-            data-masonry='{"percentPosition": true }'
+
         >
             <?php
             // Custom query to get the next 8 posts from "Noticias" category
