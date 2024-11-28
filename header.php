@@ -169,7 +169,7 @@
         ): ?>class="navbar-home"<?php endif; ?>>
             <div class="container">
                 <div class="row">
-                    <div class="col-3 col-lg-2 my-auto">
+                    <div class="col-3 col-lg-1 my-auto">
                         <a href="<?php echo esc_url(home_url()); ?>">
                             <img
                                 src="<?php echo esc_url(
@@ -183,7 +183,7 @@
                             />
                         </a>
                     </div>
-                    <div class="col-9 col-lg-10 my-auto text-end">
+                    <div class="col-9 col-lg-11 my-auto text-end">
                         <nav class="d-none d-lg-block">
                             <ul class="list-inline mb-0">
                                 <li class="list-inline-item">
