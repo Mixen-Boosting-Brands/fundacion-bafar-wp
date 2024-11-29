@@ -8,8 +8,9 @@
             >
                 <div class="row mt-5 mt-lg-0">
                     <div class="col-12">
-                        <h2 class="mb-0">Fundación</h2>
-                        <h1 class="fw-bold">Grupo Bafar</h1>
+                        <img src="<?php echo esc_url(
+                            get_template_directory_uri()
+                        ); ?>/assets/images/logo-fundacion-bafar.png" alt="" style="max-width: 520px;">
                         <p class="d-inline">Una institución orientada a la formación de </p>
                         <img
                             src="<?php echo esc_url(
