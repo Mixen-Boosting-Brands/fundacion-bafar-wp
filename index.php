@@ -8,7 +8,7 @@
             >
                 <div class="row mt-5 mt-lg-0">
                     <div class="col-12">
-                        <img src="<?php echo esc_url(
+                        <img class="d-block mb-2" src="<?php echo esc_url(
                             get_template_directory_uri()
                         ); ?>/assets/images/logo-fundacion-bafar.png" alt="" style="max-width: 520px;">
                         <p class="d-inline">Una institución orientada a la formación de </p>
