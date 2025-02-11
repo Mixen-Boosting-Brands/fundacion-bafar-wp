@@ -77,29 +77,44 @@ get_header(); ?>
                         <div class="row">
                             <?php if ($class == "chico"): ?>
                                 <div class="col-4 my-auto">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php the_post_thumbnail(
-                                            "thumb-noticia-chico",
-                                            ["class" => "img-fluid"]
-                                        ); ?>
-                                    </a>
+                                    <?php while (have_rows("videos")):
+
+                                        the_row();
+                                        $videoID = get_sub_field("video");
+                                        ?>
+                                        <div class="ratio ratio-16x9">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/<?php echo $videoID; ?>"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen
+                                            ></iframe>
+                                        </div>
+                                    <?php
+                                    endwhile; ?>
                                 </div>
                                 <div class="col-8">
                             <?php else: ?>
                                 <div class="col-12 mb-3">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php the_post_thumbnail(
-                                            "thumb-noticia-grande",
-                                            ["class" => "img-fluid"]
-                                        ); ?>
-                                    </a>
+                                    <?php while (have_rows("videos")):
+
+                                        the_row();
+                                        $videoID = get_sub_field("video");
+                                        ?>
+                                        <div class="ratio ratio-16x9">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/<?php echo $videoID; ?>"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen
+                                            ></iframe>
+                                        </div>
+                                    <?php
+                                    endwhile; ?>
                                 </div>
                                 <div class="col-12">
                             <?php endif; ?>
-                                <a href="<?php the_permalink(); ?>">
-                                    <h2><?php the_title(); ?></h2>
-                                </a>
-                                <p><?php the_excerpt(); ?></p>
+                                <h2><?php the_title(); ?></h2>
                             </div>
                         </div>
                     </div>
