@@ -143,23 +143,8 @@
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
                                         <small>
-                                            Lic. Martha González O.<br>
+                                            Lic. Alejandra Baeza García<br>
                                             Dirección Fundación<br>
-                                            <a href="mailto:mgonzalez@bafar.com.mx">mgonzalez@bafar.com.mx</a>
-                                        </small>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <small>
-                                            Prof. David Contreras Ch.<br>
-                                            Escuelas Socio Deportivas<br>
-                                            <a href="mailto:dcontreras@bafar.com.mx">dcontreras@bafar.com.mx</a>
-                                        </small>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <small>
-                                            Lic. Susana Guardado M.<br>
-                                            Centro de Acopio<br>
-                                            <a href="mailto:suguardado@bafar.com.mx">suguardado@bafar.com.mx</a>
                                         </small>
                                     </li>
                                 </ul>
