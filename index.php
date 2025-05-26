@@ -2,7 +2,7 @@
 get_header();
 
 // Custom fields (Banner principal)
-$banner_principal = get_field("banner_principal", "option");
+$banner_principal = get_field("banner_principal", "option") ?: [];
 $logotipo = $banner_principal["logotipo"] ?? "";
 $texto_banner = $banner_principal["texto_banner"] ?? "";
 $imagen_texto_mejores_mexicanos =
@@ -15,7 +15,7 @@ $imagen_del_lado_derecho = $banner_principal["imagen_del_lado_derecho"] ?? "";
 
 <section id="jumbotron" class="bg-jumbotron-home" style="background: url('<?php echo esc_url(
     $imagen_de_fondo
-); ?>') no-repeat;">
+); ?>') center center / cover no-repeat;">
     <div class="container-fluid">
         <div class="row">
             <div
@@ -38,11 +38,13 @@ $imagen_del_lado_derecho = $banner_principal["imagen_del_lado_derecho"] ?? "";
                             class="img-fluid"
                         />
                         <div class="d-block mt-3">
-                            <a href="<?php echo esc_url(
-                                $enlace_del_boton
-                            ); ?>" class="btn btn-primary"><?php echo esc_html(
-    $texto_boton
-); ?></a>
+                            <?php if ($enlace_del_boton && $texto_boton): ?>
+                                <a href="<?php echo esc_url(
+                                    $enlace_del_boton
+                                ); ?>" class="btn btn-primary">
+                                    <?php echo esc_html($texto_boton); ?>
+                                </a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
