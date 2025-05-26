@@ -11,6 +11,11 @@ $texto_boton = $banner_principal["texto_boton"] ?? "";
 $enlace_del_boton = $banner_principal["enlace_del_boton"] ?? "";
 $imagen_de_fondo = $banner_principal["imagen_de_fondo"] ?? "";
 $imagen_del_lado_derecho = $banner_principal["imagen_del_lado_derecho"] ?? "";
+
+// Custom fields (Aliados)
+$aliados = get_field("aliados", "option") ?: [];
+$titulo_seccion = $aliados["titulo_seccion"] ?? "";
+$logotipos = $aliados["logotipos"] ?? "";
 ?>
 
 <section id="jumbotron" class="bg-jumbotron-home" style="background: url('<?php echo esc_url(
@@ -64,7 +69,7 @@ $imagen_del_lado_derecho = $banner_principal["imagen_del_lado_derecho"] ?? "";
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h1>Nuestros Aliados Sociales</h1>
+                <h1><?php echo esc_html($titulo_seccion); ?></h1>
             </div>
         </div>
     </div>
@@ -76,14 +81,21 @@ $imagen_del_lado_derecho = $banner_principal["imagen_del_lado_derecho"] ?? "";
                     <div class="swiper swiper-aliados">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
-                            <?php for ($i = 1; $i <= 41; $i++): ?>
-                                <!-- Slides -->
-                                <div class="swiper-slide">
-                                    <img src="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/aliados/<?php echo $i; ?>.png" alt="" class="img-fluid">
-                                </div>
-                            <?php endfor; ?>
+                            <?php if (!empty($logotipos)): ?>
+                                <?php foreach ($logotipos as $logo): ?>
+                                    <?php
+                                    $logo_url = $logo["logotipo"] ?? "";
+                                    if ($logo_url): ?>
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <img src="<?php echo esc_url(
+                                                $logo_url
+                                            ); ?>" alt="" class="img-fluid">
+                                        </div>
+                                    <?php endif;
+                                    ?>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
