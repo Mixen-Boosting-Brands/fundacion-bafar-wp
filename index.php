@@ -1,6 +1,12 @@
-<?php get_header(); ?>
+<?php
+get_header();
+$banner_principal = get_field("banner_principal", "option");
+$imagen_de_fondo = $banner_principal["imagen_de_fondo"] ?? "";
+?>
 
-<section id="jumbotron" class="bg-jumbotron-home">
+<section id="jumbotron" class="bg-jumbotron-home" style="background: url('<?php echo esc_url(
+    $imagen_de_fondo
+); ?>') no-repeat;">
     <div class="container-fluid">
         <div class="row">
             <div
