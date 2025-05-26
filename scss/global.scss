@@ -366,7 +366,9 @@ header {
 }
 
 .bg-jumbotron-home {
-    @include background("../images/bg-jumbotron-home.png", center, cover);
+    // @include background("../images/bg-jumbotron-home.png", center, cover);
+    background-position: center !important;
+    background-size: cover !important;
     color: $primary !important;
     min-height: auto !important;
 
