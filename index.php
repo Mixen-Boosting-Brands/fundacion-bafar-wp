@@ -1,7 +1,16 @@
 <?php
 get_header();
+
+// Custom fields (Banner principal)
 $banner_principal = get_field("banner_principal", "option");
+$logotipo = $banner_principal["logotipo"] ?? "";
+$texto_banner = $banner_principal["texto_banner"] ?? "";
+$imagen_texto_mejores_mexicanos =
+    $banner_principal["imagen_texto_mejores_mexicanos"] ?? "";
+$texto_boton = $banner_principal["texto_boton"] ?? "";
+$enlace_del_boton = $banner_principal["enlace_del_boton"] ?? "";
 $imagen_de_fondo = $banner_principal["imagen_de_fondo"] ?? "";
+$imagen_del_lado_derecho = $banner_principal["imagen_del_lado_derecho"] ?? "";
 ?>
 
 <section id="jumbotron" class="bg-jumbotron-home" style="background: url('<?php echo esc_url(
@@ -15,28 +24,32 @@ $imagen_de_fondo = $banner_principal["imagen_de_fondo"] ?? "";
                 <div class="row mt-5 mt-lg-0">
                     <div class="col-12">
                         <img class="d-block mb-2" src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/logo-fundacion-bafar.png" alt="" style="max-width: 520px;">
-                        <p class="d-inline">Una institución orientada a la formación de </p>
+                            $logotipo
+                        ); ?>" alt="" style="max-width: 520px;">
+                        <p class="d-inline"><?php echo esc_html(
+                            $texto_banner
+                        ); ?></p>
                         <img
                             src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/jumbotron/thumb-mejores-mexicanos.png"
+                                $imagen_texto_mejores_mexicanos
+                            ); ?>"
                             alt=""
                             id="pmm"
                             class="img-fluid"
                         />
                         <div class="d-block mt-3">
-                            <a href="#aliados" class="btn btn-primary">Ver más</a>
+                            <a href="<?php echo esc_url(
+                                $enlace_del_boton
+                            ); ?>" class="btn btn-primary"><?php echo esc_html(
+    $texto_boton
+); ?></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 my-lg-auto text-end">
                 <img
-                    src="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/jumbotron/thumb-jumbotron-home.png"
+                    src="<?php echo esc_url($imagen_del_lado_derecho); ?>"
                     alt=""
                     class="img-fluid mt-3"
                 />
