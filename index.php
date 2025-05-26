@@ -107,61 +107,37 @@ $logotipos = $aliados["logotipos"] ?? "";
 <section id="figuras" class="py-30">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 col-xl-2 offset-xl-1">
-                <div id="fig-1" class="figura fig-up mb-4 mb-xl-0">
-                    <a href="<?php
-                    $permalink = get_permalink(262);
-                    echo $permalink;
-                    ?>"></a>
-                    <div class="overlay">
-                        <h1>Escuelas Sociodeportivas</h1>
+            <?php
+            $secciones = get_field("secciones", "option") ?: [];
+
+            $index = 1;
+            foreach ($secciones as $item):
+
+                $seccion = $item["seccion"] ?? [];
+                $titulo = $seccion["titulo_de_la_seccion"] ?? "";
+                $imagen_fondo = $seccion["imagen_de_fondo_del_boton"] ?? "";
+                $enlace = $seccion["enlace_del_boton"] ?? "#";
+
+                // Alternancia para fig-up / fig-down
+                $fig_clase = $index % 2 === 0 ? "fig-down" : "fig-up";
+                ?>
+                <div class="col-md-6 col-xl-2 <?php echo $index === 1
+                    ? "offset-xl-1"
+                    : ""; ?>">
+                    <div id="fig-<?php echo esc_attr(
+                        $index
+                    ); ?>" class="figura <?php echo $fig_clase; ?> mb-4 mb-xl-0" style="background-image: url('<?php echo esc_url(
+     $imagen_fondo
+ ); ?>'); background-size: cover;">
+                        <a href="<?php echo esc_url($enlace); ?>"></a>
+                        <div class="overlay">
+                            <h1><?php echo esc_html($titulo); ?></h1>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-xl-2">
-                <div id="fig-2" class="figura fig-down mb-4 mb-xl-0">
-                    <a href="<?php
-                    $permalink = get_permalink(266);
-                    echo $permalink;
-                    ?>"></a>
-                    <div class="overlay">
-                        <h1>Centro de acopio</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-2">
-                <div id="fig-3" class="figura fig-up mb-4 mb-xl-0">
-                    <a href="<?php
-                    $permalink = get_permalink(272);
-                    echo $permalink;
-                    ?>"></a>
-                    <div class="overlay">
-                        <h1>Jornadas médicas</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-2">
-                <div id="fig-4" class="figura fig-down mb-4 mb-xl-0">
-                    <a href="<?php
-                    $permalink = get_permalink(276);
-                    echo $permalink;
-                    ?>"></a>
-                    <div class="overlay">
-                        <h1>Voluntariado</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-2">
-                <div id="fig-5" class="figura fig-up mb-4 mb-xl-0">
-                    <a href="<?php
-                    $permalink = get_permalink(280);
-                    echo $permalink;
-                    ?>"></a>
-                    <div class="overlay">
-                        <h1>Guardería</h1>
-                    </div>
-                </div>
-            </div>
+            <?php $index++;
+            endforeach;
+            ?>
         </div>
     </div>
 </section>
