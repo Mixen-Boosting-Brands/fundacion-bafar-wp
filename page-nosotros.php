@@ -11,6 +11,15 @@ $texto_superior = $banner["texto_superior"] ?? "";
 $texto_inferior = $banner["texto_inferior"] ?? "";
 $imagen_de_fondo = $banner["imagen_de_fondo"] ?? "";
 $imagen_del_lado_derecho = $banner["imagen_del_lado_derecho"] ?? "";
+
+$qs = get_field("quienes_somos") ?: [];
+
+$titulo_normal = $qs["titulo_normal"] ?? "";
+$titulo_negritas = $qs["titulo_negritas"] ?? "";
+$texto_1 = $qs["texto_1"] ?? "";
+$imagen_izquierda = $qs["imagen_del_lado_izquierdo"] ?? "";
+$texto_2 = $qs["texto_2"] ?? "";
+$imagen_derecha = $qs["imagen_del_lado_derecho"] ?? "";
 ?>
 
 <section id="jumbotron" class="bg-jumbotron-1"
@@ -67,55 +76,49 @@ $imagen_del_lado_derecho = $banner["imagen_del_lado_derecho"] ?? "";
     <div class="container">
         <div class="row">
             <div class="col-lg-6 mb-4 my-lg-auto text-center">
-                <img
-                    src="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/thumb-quienes-somos-1.png"
-                    alt=""
-                    class="rounded img-fluid"
-                />
+                <?php if ($imagen_izquierda): ?>
+                    <img
+                        src="<?php echo esc_url($imagen_izquierda); ?>"
+                        alt=""
+                        class="rounded img-fluid"
+                    />
+                <?php endif; ?>
             </div>
             <div class="col-lg-6 my-auto">
                 <h1>
-                    <span class="fw-light">Quiénes</span>
-                    <span class="fw-bold color-primary comentario"
-                        >somos</span
-                    >
+                    <?php if ($titulo_normal): ?>
+                        <span class="fw-light"><?php echo esc_html(
+                            $titulo_normal
+                        ); ?></span>
+                    <?php endif; ?>
+                    <?php if ($titulo_negritas): ?>
+                        <span class="fw-bold color-primary comentario"><?php echo esc_html(
+                            $titulo_negritas
+                        ); ?></span>
+                    <?php endif; ?>
                 </h1>
-                <p>
-                    Fundación Grupo Bafar es una institución orientada a
-                    la formación de mejores mexicanos, nos enfocamos en
-                    aquellas personas que brinden un mayor beneficio a
-                    mediano y largo plazo, pero que además sean
-                    congruentes con nuestros 5 ejes principales:
-                    alimentación, educación, deporte, valores y salud y
-                    cuidado del medio ambiente.
-                </p>
+                <?php if ($texto_1): ?>
+                    <p><?php echo esc_html($texto_1); ?></p>
+                <?php endif; ?>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-8 mb-4 my-lg-auto">
-                <p>
-                    Con esto nuestra fundación tiene muy claros sus
-                    objetivos, y desde su formación ha buscado a través
-                    de sus programas sociales alcanzar un mayor impacto
-                    en sus acciones sociales para dejar no sólo en sus
-                    beneficiarios, sino en la comunidad en general, un
-                    mensaje de unión y solidaridad que proyecte
-                    resultados positivos para los mexicanos.
-                </p>
+                <?php if ($texto_2): ?>
+                    <p><?php echo esc_html($texto_2); ?></p>
+                <?php endif; ?>
                 <h6>
                     Fundación Grupo Bafar: Comprometidos por formar <strong>mejores mexicanos</strong>
                 </h6>
             </div>
             <div class="col-lg-4 my-auto text-center">
-                <img
-                    src="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/thumb-quienes-somos-2.png"
-                    alt=""
-                    class="img-fluid"
-                />
+                <?php if ($imagen_derecha): ?>
+                    <img
+                        src="<?php echo esc_url($imagen_derecha); ?>"
+                        alt=""
+                        class="img-fluid"
+                    />
+                <?php endif; ?>
             </div>
         </div>
     </div>
