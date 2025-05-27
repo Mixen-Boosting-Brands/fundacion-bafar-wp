@@ -165,7 +165,8 @@
         </div>
 
         <header id="navbar" <?php if (
-            is_home()
+            is_home() ||
+            is_page(18)
         ): ?>class="navbar-home"<?php endif; ?>>
             <div class="container">
                 <div class="row">
