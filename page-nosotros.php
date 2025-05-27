@@ -5,7 +5,7 @@
 get_header();
 
 // Custom fields (Nosotros)
-$banner = get_field("banner_principal", "option") ?: [];
+$banner = get_field("banner_principal") ?: [];
 
 $texto_superior = $banner["texto_superior"] ?? "";
 $texto_inferior = $banner["texto_inferior"] ?? "";
