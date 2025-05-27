@@ -1,3 +1,19 @@
+<?php
+// Custom fields (Contacto)
+$contacto = get_field("contacto", "option") ?: [];
+$titulo_normal = $contacto["titulo_normal"] ?? "";
+$titulo_en_negritas = $contacto["titulo_en_negritas"] ?? "";
+$contactos = $contacto["contactos"] ?? [];
+$direccion_data = $contacto["direccion"] ?? [];
+$direccion_texto = $direccion_data["direccion"] ?? "";
+$telefono_visible = $direccion_data["telefono"] ?? "";
+// Formatea número para el href
+$telefono_numerico = preg_replace("/\D+/", "", $telefono_visible); // elimina paréntesis, espacios, etc.
+$telefono_href = "+52" . $telefono_numerico;
+$extension = $direccion_data["numero_de_extension"] ?? "";
+$imagen_decorativa = $contacto["imagen_decorativa"] ?? "";
+?>
+
 		<!-- section id="mapa">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5035.61538524368!2d-106.1211510918162!3d28.582024651338507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea5d0765b419f5%3A0x97c8db700a6c8f85!2sGrupo%20Bafar!5e0!3m2!1ses-419!2smx!4v1721861492320!5m2!1ses-419!2smx"
@@ -17,14 +33,16 @@
                         <div class="row mb-4">
                             <div class="col mb-4">
                                 <h1>
-                                    <span class="fw-light">¿Cómo podemos</span>
-                                    <span
-                                        class="fw-bold color-primary comentario"
-                                        >ayudarte?</span
-                                    >
+                                    <span class="fw-light"><?php echo esc_html(
+                                        $titulo_normal
+                                    ); ?></span>
+                                    <span class="fw-bold color-primary comentario"><?php echo esc_html(
+                                        $titulo_en_negritas
+                                    ); ?></span>
                                 </h1>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col">
                                 <!-- Aquí se inyecta feedback a usuario vía Ajax -->
@@ -49,16 +67,9 @@
                                             pattern=".{5,50}"
                                             required
                                         />
-                                        <label for="nombre" class="form-label"
-                                            >Nombre*</label
-                                        >
-                                        <div class="valid-feedback">
-                                            ¡Se ve bien!
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Por favor introduce tu nombre
-                                            completo.
-                                        </div>
+                                        <label for="nombre" class="form-label">Nombre*</label>
+                                        <div class="valid-feedback">¡Se ve bien!</div>
+                                        <div class="invalid-feedback">Por favor introduce tu nombre completo.</div>
                                     </div>
                                     <div class="col-md-12 form-floating">
                                         <input
@@ -69,16 +80,9 @@
                                             placeholder="Correo*"
                                             required
                                         />
-                                        <label for="correo" class="form-label"
-                                            >Correo*</label
-                                        >
-                                        <div class="valid-feedback">
-                                            ¡Se ve bien!
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Por favor introduce un correo
-                                            electrónico válido.
-                                        </div>
+                                        <label for="correo" class="form-label">Correo*</label>
+                                        <div class="valid-feedback">¡Se ve bien!</div>
+                                        <div class="invalid-feedback">Por favor introduce un correo electrónico válido.</div>
                                     </div>
                                     <div class="col-md-12 form-floating">
                                         <input
@@ -89,16 +93,9 @@
                                             placeholder="Teléfono*"
                                             required
                                         />
-                                        <label for="telefono" class="form-label"
-                                            >Teléfono*</label
-                                        >
-                                        <div class="valid-feedback">
-                                            ¡Se ve bien!
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Por favor introduce un número de
-                                            teléfono válido.
-                                        </div>
+                                        <label for="telefono" class="form-label">Teléfono*</label>
+                                        <div class="valid-feedback">¡Se ve bien!</div>
+                                        <div class="invalid-feedback">Por favor introduce un número de teléfono válido.</div>
                                     </div>
                                     <div class="col-md-12 form-floating mb-4">
                                         <textarea
@@ -110,74 +107,81 @@
                                             required
                                         ></textarea>
                                         <label for="mensaje">Mensaje*</label>
-                                        <div class="valid-feedback">
-                                            ¡Se ve bien!
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Por favor introduce tu mensaje.
-                                        </div>
+                                        <div class="valid-feedback">¡Se ve bien!</div>
+                                        <div class="invalid-feedback">Por favor introduce tu mensaje.</div>
                                     </div>
                                     <div class="col-md-6 my-auto">
-                                        <button
-                                            type="submit"
-                                            class="btn btn-primary btn-lg btn-block"
-                                        >
-                                            <i
-                                                class="fa-solid fa-paper-plane"
-                                            ></i>
-                                            Enviar
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                                            <i class="fa-solid fa-paper-plane"></i> Enviar
                                         </button>
                                         <div id="hold-on-a-sec">
-                                            <i
-                                                id="contact-spinner"
-                                                class="fas fa-spinner fa-spin"
-                                            ></i>
+                                            <i id="contact-spinner" class="fas fa-spinner fa-spin"></i>
                                             Espera un momento por favor...
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col">
                                 <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <small>
-                                            Lic. Alejandra Baeza García<br>
-                                            Dirección Fundación<br>
-                                            <a href="#">-</a>
-                                        </small>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <small>
-                                            Prof. David Contreras Ch.<br>
-                                            Escuelas Socio Deportivas<br>
-                                            <a href="mailto:dcontreras@bafar.com.mx">dcontreras@bafar.com.mx</a>
-                                        </small>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <small>
-                                            Lic. Susana Guardado M.<br>
-                                            Centro de Acopio<br>
-                                            <a href="mailto:suguardado@bafar.com.mx">suguardado@bafar.com.mx</a>
-                                        </small>
-                                    </li>
+                                    <?php if (!empty($contactos)): ?>
+                                        <?php foreach ($contactos as $c): ?>
+                                            <?php
+                                            $nombre = $c["nombre"] ?? "";
+                                            $puesto = $c["puesto"] ?? "";
+                                            $correo = $c["correo"] ?? "";
+                                            ?>
+                                            <li class="list-inline-item">
+                                                <small>
+                                                    <?php echo esc_html(
+                                                        $nombre
+                                                    ); ?><br>
+                                                    <?php echo esc_html(
+                                                        $puesto
+                                                    ); ?><br>
+                                                    <?php if ($correo): ?>
+                                                        <a href="mailto:<?php echo esc_attr(
+                                                            $correo
+                                                        ); ?>"><?php echo esc_html(
+    $correo
+); ?></a>
+                                                    <?php endif; ?>
+                                                </small>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
                                 </ul>
                                 <address>
-                                    Km 7.5 Carretera a Cuauhtémoc, Col. Las Ánimas. C.P. 31450, Chihuahua, Chih. México<br>
-                                    Tel. <a href="+526144390100">(614) 439 0100 ext. 7213</a>
+                                    <?php echo esc_html(
+                                        $direccion_texto
+                                    ); ?><br>
+                                    Tel. <a href="tel:<?php echo esc_attr(
+                                        $telefono_href
+                                    ); ?>">
+                                        <?php echo esc_html(
+                                            $telefono_visible
+                                        ); ?>
+                                        <?php if ($extension): ?>
+                                            ext. <?php echo esc_html(
+                                                $extension
+                                            ); ?>
+                                        <?php endif; ?>
+                                    </a>
                                 </address>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-6 my-auto">
-                        <img
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/thumb-contacto.png"
-                            alt=""
-                            class="img-fluid mb-5 mb-lg-0"
-                        />
+                        <?php if (!empty($imagen_decorativa)): ?>
+                            <img
+                                src="<?php echo esc_url($imagen_decorativa); ?>"
+                                alt=""
+                                class="img-fluid mb-5 mb-lg-0"
+                            />
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
