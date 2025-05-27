@@ -2,7 +2,7 @@
 get_header();
 
 // Custom fields (Banner principal)
-$banner_principal = get_field("banner_principal", "option") ?: [];
+$banner_principal = get_field("banner_principal") ?: [];
 $logotipo = $banner_principal["logotipo"] ?? "";
 $texto_banner = $banner_principal["texto_banner"] ?? "";
 $imagen_texto_mejores_mexicanos =
@@ -13,7 +13,7 @@ $imagen_de_fondo = $banner_principal["imagen_de_fondo"] ?? "";
 $imagen_del_lado_derecho = $banner_principal["imagen_del_lado_derecho"] ?? "";
 
 // Custom fields (Aliados)
-$aliados = get_field("aliados", "option") ?: [];
+$aliados = get_field("aliados") ?: [];
 $titulo_seccion = $aliados["titulo_seccion"] ?? "";
 $logotipos = $aliados["logotipos"] ?? "";
 ?>
@@ -108,7 +108,7 @@ $logotipos = $aliados["logotipos"] ?? "";
     <div class="container-fluid">
         <div class="row">
             <?php
-            $secciones = get_field("secciones", "option") ?: [];
+            $secciones = get_field("secciones") ?: [];
 
             $index = 1;
             foreach ($secciones as $item):
