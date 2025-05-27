@@ -12,6 +12,12 @@ $telefono_numerico = preg_replace("/\D+/", "", $telefono_visible); // elimina pa
 $telefono_href = "+52" . $telefono_numerico;
 $extension = $direccion_data["numero_de_extension"] ?? "";
 $imagen_decorativa = $contacto["imagen_decorativa"] ?? "";
+
+// Custom fields (pie)
+$pie = get_field("pie", "option") ?: [];
+$logotipo_footer = $pie["logotipo"] ?? "";
+$enlace_logotipo = $pie["enlace_del_logotipo"] ?? home_url(); // fallback al home
+$imagen_fondo_footer = $pie["imagen_de_fondo"] ?? "";
 ?>
 
 		<!-- section id="mapa">
@@ -187,21 +193,25 @@ $imagen_decorativa = $contacto["imagen_decorativa"] ?? "";
             </div>
         </section>
 
-        <footer>
+        <footer style="<?php if (
+            $imagen_fondo_footer
+        ): ?>background-image: url('<?php echo esc_url(
+    $imagen_fondo_footer
+); ?>'); background-size: cover; background-repeat: no-repeat;<?php endif; ?>">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
-                    <div
-                        class="col-10 offset-1 col-lg-12 offset-lg-0 text-center"
-                    >
-                        <a href="<?php echo esc_url(home_url()); ?>">
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/logo-footer@2x.png"
-                                alt=""
-                                class="logo img-fluid"
-                            />
+                    <div class="col-10 offset-1 col-lg-12 offset-lg-0 text-center">
+                        <a href="<?php echo esc_url($enlace_logotipo); ?>">
+                            <?php if ($logotipo_footer): ?>
+                                <img
+                                    src="<?php echo esc_url(
+                                        $logotipo_footer
+                                    ); ?>"
+                                    alt="Logotipo del pie"
+                                    class="logo img-fluid"
+                                />
+                            <?php endif; ?>
                         </a>
                     </div>
                 </div>

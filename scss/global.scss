@@ -1179,7 +1179,7 @@ $index-jumbotron: 1;
 }
 
 footer {
-    @include background("../images/bg-footer.png", center, cover);
+    // @include background("../images/bg-footer.png", center, cover);
     padding: 100px 0;
     position: relative;
 
