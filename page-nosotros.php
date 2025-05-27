@@ -30,6 +30,17 @@ $fondo_mision = $myv["imagen_de_fondo_mision"] ?? "";
 $titulo_vision = $myv["titulo_vision"] ?? "";
 $texto_vision = $myv["texto_vision"] ?? "";
 $fondo_vision = $myv["imagen_de_fondo_vision"] ?? "";
+
+$valores = get_field("valores") ?: [];
+
+$titulo_normal = $valores["titulo_normal"] ?? "";
+$titulo_negritas = $valores["titulo_negritas"] ?? "";
+
+$imagen_bondad = $valores["imagen_de_fondo_bondad"] ?? "";
+$imagen_amistad = $valores["imagen_de_fondo_amistad"] ?? "";
+$imagen_fortaleza = $valores["imagen_de_fondo_fortaleza"] ?? "";
+$imagen_audacia = $valores["imagen_de_fondo_audacia"] ?? "";
+$imagen_respeto = $valores["imagen_de_fondo_respeto"] ?? "";
 ?>
 
 <section id="jumbotron" class="bg-jumbotron-1"
@@ -198,10 +209,12 @@ $fondo_vision = $myv["imagen_de_fondo_vision"] ?? "";
         <div class="row">
             <div class="col text-center">
                 <h1>
-                    <span class="fw-light">Nuestros</span>
-                    <span class="fw-bold color-primary bigger"
-                        >Valores</span
-                    >
+                    <span class="fw-light"><?php echo esc_html(
+                        $titulo_normal
+                    ); ?></span>
+                    <span class="fw-bold color-primary bigger"><?php echo esc_html(
+                        $titulo_negritas
+                    ); ?></span>
                 </h1>
             </div>
         </div>
@@ -210,40 +223,35 @@ $fondo_vision = $myv["imagen_de_fondo_vision"] ?? "";
         <div class="row">
             <div class="col">
                 <div class="contenedor-valores">
-                    <div class="valor bg-valor-1">
+                    <div class="valor" style="background: url('<?php echo esc_url(
+                        $imagen_bondad
+                    ); ?>') center center / cover no-repeat;">
                         <div class="overlay"></div>
-                        <h1>
-                            <span class="fw-bold bigger">B</span
-                            ><span class="fw-light">ondad</span>
-                        </h1>
+                        <h1><span class="fw-bold bigger">B</span><span class="fw-light">ondad</span></h1>
                     </div>
-                    <div class="valor bg-valor-2">
+                    <div class="valor" style="background: url('<?php echo esc_url(
+                        $imagen_amistad
+                    ); ?>') center center / cover no-repeat;">
                         <div class="overlay"></div>
-                        <h1>
-                            <span class="fw-bold bigger">A</span
-                            ><span class="fw-light">mistad</span>
-                        </h1>
+                        <h1><span class="fw-bold bigger">A</span><span class="fw-light">mistad</span></h1>
                     </div>
-                    <div class="valor bg-valor-3">
+                    <div class="valor" style="background: url('<?php echo esc_url(
+                        $imagen_fortaleza
+                    ); ?>') center center / cover no-repeat;">
                         <div class="overlay"></div>
-                        <h1>
-                            <span class="fw-bold bigger">F</span
-                            ><span class="fw-light">ortaleza</span>
-                        </h1>
+                        <h1><span class="fw-bold bigger">F</span><span class="fw-light">ortaleza</span></h1>
                     </div>
-                    <div class="valor bg-valor-4">
+                    <div class="valor" style="background: url('<?php echo esc_url(
+                        $imagen_audacia
+                    ); ?>') center center / cover no-repeat;">
                         <div class="overlay"></div>
-                        <h1>
-                            <span class="fw-bold bigger">A</span
-                            ><span class="fw-light">udacia</span>
-                        </h1>
+                        <h1><span class="fw-bold bigger">A</span><span class="fw-light">udacia</span></h1>
                     </div>
-                    <div class="valor bg-valor-5">
+                    <div class="valor" style="background: url('<?php echo esc_url(
+                        $imagen_respeto
+                    ); ?>') center center / cover no-repeat;">
                         <div class="overlay"></div>
-                        <h1>
-                            <span class="fw-bold bigger">R</span
-                            ><span class="fw-light">espeto</span>
-                        </h1>
+                        <h1><span class="fw-bold bigger">R</span><span class="fw-light">espeto</span></h1>
                     </div>
                 </div>
             </div>
