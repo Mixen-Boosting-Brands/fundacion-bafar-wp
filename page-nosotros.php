@@ -20,6 +20,16 @@ $texto_1 = $qs["texto_1"] ?? "";
 $imagen_izquierda = $qs["imagen_del_lado_izquierdo"] ?? "";
 $texto_2 = $qs["texto_2"] ?? "";
 $imagen_derecha = $qs["imagen_del_lado_derecho"] ?? "";
+
+$myv = get_field("mision_y_vision") ?: [];
+
+$titulo_mision = $myv["titulo_mision"] ?? "";
+$texto_mision = $myv["texto_mision"] ?? "";
+$fondo_mision = $myv["imagen_de_fondo_mision"] ?? "";
+
+$titulo_vision = $myv["titulo_vision"] ?? "";
+$texto_vision = $myv["texto_vision"] ?? "";
+$fondo_vision = $myv["imagen_de_fondo_vision"] ?? "";
 ?>
 
 <section id="jumbotron" class="bg-jumbotron-1"
@@ -124,49 +134,53 @@ $imagen_derecha = $qs["imagen_del_lado_derecho"] ?? "";
     </div>
 </section>
 
-<section id="mision" class="m-v">
+<section
+    id="mision"
+    class="m-v"
+    style="background-image: url('<?php echo esc_url(
+        $fondo_mision
+    ); ?>'); background-size: cover; background-position: center;"
+>
     <div class="overlay"></div>
     <div class="container">
         <div class="row mb-4">
-            <div
-                class="col-10 offset-1 col-lg-12 offset-lg-0 text-center"
-            >
+            <div class="col-10 offset-1 col-lg-12 offset-lg-0 text-center">
                 <h1>
-                    <span class="fw-bold">Misión</span>
+                    <span class="fw-bold"><?php echo esc_html(
+                        $titulo_mision
+                    ); ?></span>
                 </h1>
             </div>
         </div>
         <div class="row">
-            <div
-                class="col-10 offset-1 col-lg-12 offset-lg-0 text-center"
-            >
-                <p>
-                    Contribuir a la reconstrucción del tejido social, a través de programas integrales de: alimentación, deporte, educación, valores, salud y cuidado del medio ambiente, impulsando una mejor calidad de vida de personas que viven en situación de vulnerabilidad, para formar <strong>mejores mexicanos</strong>.
-                </p>
+            <div class="col-10 offset-1 col-lg-12 offset-lg-0 text-center">
+                <p><?php echo esc_html($texto_mision); ?></p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="vision" class="m-v">
+<section
+    id="vision"
+    class="m-v"
+    style="background-image: url('<?php echo esc_url(
+        $fondo_vision
+    ); ?>'); background-size: cover; background-position: center;"
+>
     <div class="overlay"></div>
     <div class="container">
         <div class="row mb-4">
-            <div
-                class="col-10 offset-1 col-lg-12 offset-lg-0 text-center"
-            >
+            <div class="col-10 offset-1 col-lg-12 offset-lg-0 text-center">
                 <h1>
-                    <span class="fw-bold">Visión</span>
+                    <span class="fw-bold"><?php echo esc_html(
+                        $titulo_vision
+                    ); ?></span>
                 </h1>
             </div>
         </div>
         <div class="row">
-            <div
-                class="col-10 offset-1 col-lg-12 offset-lg-0 text-center"
-            >
-                <p>
-                    Contribuimos a la formación de mejores mexicanos, que consolidan una sociedad más participativa, sana, educada y próspera.
-                </p>
+            <div class="col-10 offset-1 col-lg-12 offset-lg-0 text-center">
+                <p><?php echo esc_html($texto_vision); ?></p>
             </div>
         </div>
     </div>
