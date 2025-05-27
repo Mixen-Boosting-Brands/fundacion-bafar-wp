@@ -226,31 +226,31 @@ $imagen_respeto = $valores["imagen_de_fondo_respeto"] ?? "";
                     <div class="valor" style="background: url('<?php echo esc_url(
                         $imagen_bondad
                     ); ?>') center center / cover no-repeat;">
-                        <div class="overlay"></div>
+                        <div class="overlay bg-valor-1"></div>
                         <h1><span class="fw-bold bigger">B</span><span class="fw-light">ondad</span></h1>
                     </div>
                     <div class="valor" style="background: url('<?php echo esc_url(
                         $imagen_amistad
                     ); ?>') center center / cover no-repeat;">
-                        <div class="overlay"></div>
+                        <div class="overlay bg-valor-2"></div>
                         <h1><span class="fw-bold bigger">A</span><span class="fw-light">mistad</span></h1>
                     </div>
                     <div class="valor" style="background: url('<?php echo esc_url(
                         $imagen_fortaleza
                     ); ?>') center center / cover no-repeat;">
-                        <div class="overlay"></div>
+                        <div class="overlay bg-valor-3"></div>
                         <h1><span class="fw-bold bigger">F</span><span class="fw-light">ortaleza</span></h1>
                     </div>
                     <div class="valor" style="background: url('<?php echo esc_url(
                         $imagen_audacia
                     ); ?>') center center / cover no-repeat;">
-                        <div class="overlay"></div>
+                        <div class="overlay bg-valor-4"></div>
                         <h1><span class="fw-bold bigger">A</span><span class="fw-light">udacia</span></h1>
                     </div>
                     <div class="valor" style="background: url('<?php echo esc_url(
                         $imagen_respeto
                     ); ?>') center center / cover no-repeat;">
-                        <div class="overlay"></div>
+                        <div class="overlay bg-valor-5"></div>
                         <h1><span class="fw-bold bigger">R</span><span class="fw-light">espeto</span></h1>
                     </div>
                 </div>
