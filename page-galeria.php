@@ -2,34 +2,52 @@
 /*
     Template Name: Galerías
     */
-get_header(); ?>
+get_header();
 
-<section id="jumbotron" class="bg-jumbotron-1">
+// Custom fields (Galerías)
+$banner = get_field("banner_principal") ?: [];
+
+$texto_superior = $banner["texto_superior"] ?? "";
+$texto_inferior = $banner["texto_inferior"] ?? "";
+$imagen_de_fondo = $banner["imagen_de_fondo"] ?? "";
+$imagen_del_lado_derecho = $banner["imagen_del_lado_derecho"] ?? "";
+?>
+
+<section id="jumbotron" class="bg-jumbotron-1"
+    <?php if ($imagen_de_fondo): ?>
+        style="background-image: url('<?php echo esc_url(
+            $imagen_de_fondo
+        ); ?>'); background-size: cover; background-repeat: no-repeat;"
+    <?php endif; ?>
+>
     <div class="container-fluid">
         <div class="row">
             <div class="mb-5 col-lg-6 my-lg-auto order-lg-2 text-end">
-                <img
-                    src="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/jumbotron/thumb-galeria.png"
-                    alt=""
-                    class="thumb-noticia-grande img-fluid"
-                />
+                <?php if ($imagen_del_lado_derecho): ?>
+                    <img
+                        src="<?php echo esc_url($imagen_del_lado_derecho); ?>"
+                        alt=""
+                        class="thumb-noticia-grande img-fluid"
+                    />
+                <?php endif; ?>
             </div>
-            <div
-                class="col-lg-5 offset-lg-1 my-lg-auto order-lg-1 text-center text-lg-start"
-            >
+            <div class="col-lg-5 offset-lg-1 my-lg-auto order-lg-1 text-center text-lg-start">
                 <div class="row mb-5">
                     <div class="col-12">
-                        <h1 class="fw-bold">Galerías</h1>
+                        <?php if ($texto_superior): ?>
+                            <h2><?php echo esc_html($texto_superior); ?></h2>
+                        <?php endif; ?>
+                        <?php if ($texto_inferior): ?>
+                            <h1 class="fw-bold"><?php echo esc_html(
+                                $texto_inferior
+                            ); ?></h1>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <a class="anchor arrow" href=".after-jumbotron">
-                            <i
-                                class="fa-solid fa-arrow-down-long moveUpDown"
-                            ></i>
+                            <i class="fa-solid fa-arrow-down-long moveUpDown"></i>
                         </a>
                     </div>
                 </div>
