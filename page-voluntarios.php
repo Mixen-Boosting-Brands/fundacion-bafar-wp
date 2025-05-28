@@ -2,35 +2,61 @@
 /*
     Template Name: Voluntarios
     */
-get_header(); ?>
+get_header();
 
-<section id="jumbotron" class="bg-jumbotron-1">
+// Custom fields (Voluntarios)
+$banner = get_field("banner_principal") ?: [];
+
+$texto_superior = $banner["texto_superior"] ?? "";
+$texto_inferior = $banner["texto_inferior"] ?? "";
+$imagen_de_fondo = $banner["imagen_de_fondo"] ?? "";
+$imagen_del_lado_derecho = $banner["imagen_del_lado_derecho"] ?? "";
+
+$voluntarios = get_field("voluntarios") ?: [];
+
+$titulo_normal = $voluntarios["titulo_normal"] ?? "";
+$titulo_negritas = $voluntarios["titulo_negritas"] ?? "";
+$texto = $voluntarios["texto"] ?? "";
+$imagen_derecha = $voluntarios["imagen_del_lado_derecho"] ?? "";
+$imagen_izquierda_1 = $voluntarios["imagen_del_lado_izquierdo_1"] ?? "";
+$imagen_izquierda_2 = $voluntarios["imagen_del_lado_izquierdo_2"] ?? "";
+?>
+
+<section id="jumbotron" class="bg-jumbotron-1"
+    <?php if ($imagen_de_fondo): ?>
+        style="background-image: url('<?php echo esc_url(
+            $imagen_de_fondo
+        ); ?>'); background-size: cover; background-repeat: no-repeat;"
+    <?php endif; ?>
+>
     <div class="container-fluid">
         <div class="row">
             <div class="mb-5 col-lg-6 my-lg-auto order-lg-2 text-end">
-                <img
-                    src="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/jumbotron/thumb-voluntarios.png"
-                    alt=""
-                    class="thumb-noticia-grande img-fluid"
-                />
+                <?php if ($imagen_del_lado_derecho): ?>
+                    <img
+                        src="<?php echo esc_url($imagen_del_lado_derecho); ?>"
+                        alt=""
+                        class="thumb-noticia-grande img-fluid"
+                    />
+                <?php endif; ?>
             </div>
-            <div
-                class="col-lg-5 offset-lg-1 my-lg-auto order-lg-1 text-center text-lg-start"
-            >
+            <div class="col-lg-5 offset-lg-1 my-lg-auto order-lg-1 text-center text-lg-start">
                 <div class="row mb-5">
                     <div class="col-12">
-                        <h2>Somos inspiración</h2>
-                        <h1 class="fw-bold">En acción</h1>
+                        <?php if ($texto_superior): ?>
+                            <h2><?php echo esc_html($texto_superior); ?></h2>
+                        <?php endif; ?>
+                        <?php if ($texto_inferior): ?>
+                            <h1 class="fw-bold"><?php echo esc_html(
+                                $texto_inferior
+                            ); ?></h1>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <a class="anchor arrow" href=".after-jumbotron">
-                            <i
-                                class="fa-solid fa-arrow-down-long moveUpDown"
-                            ></i>
+                            <i class="fa-solid fa-arrow-down-long moveUpDown"></i>
                         </a>
                     </div>
                 </div>
@@ -51,61 +77,51 @@ get_header(); ?>
         <div class="row">
             <div class="col-lg-6 mb-4">
                 <div class="contenedor-texto">
-                    <h1>Voluntariado</h1>
-                    <p>
-                        En Fundación Grupo Bafar estamos conscientes de
-                        que la reconstrucción del tejido social es tarea
-                        ardua y que nos involucra a todos, gobierno,
-                        sector privado y sociedad.
-                    </p>
-                    <p>
-                        Para la realización de nuestros programas es
-                        sumamente importante la labor generosa de
-                        mujeres y hombres que se entregan como
-                        voluntarios, uniendo sus talentos y energías
-                        para la formación de mejores mexicanos.
-                    </p>
-                    <p>
-                        El grupo más numeroso de voluntarios se
-                        encuentra en las y los colaboradores de Grupo
-                        Bafar, quienes además de contribuir al éxito de
-                        la empresa en las áreas que les corresponden,
-                        destinan parte de su tiempo libre a participar
-                        con entusiasmo en nuestras actividades.
-                    </p>
-                    <p>
-                        Destaca el grupo de mamás voluntarias, cuyos
-                        hijos son beneficiarios de las Escuelas Socio
-                        Deportivas. Ellas participan en la elaboración
-                        diaria de los alimentos, así como en otros de
-                        los programas que FGB desarrolla.
-                    </p>
+                    <h1>
+                        <?php if ($titulo_normal): ?>
+                            <span class="fw-light"><?php echo esc_html(
+                                $titulo_normal
+                            ); ?></span>
+                        <?php endif; ?>
+                        <?php if ($titulo_negritas): ?>
+                            <span class="fw-bold color-primary comentario"><?php echo esc_html(
+                                $titulo_negritas
+                            ); ?></span>
+                        <?php endif; ?>
+                    </h1>
+                    <?php if ($texto): ?>
+                        <?php echo esc_html($texto); ?>
+                    <?php endif; ?>
                     <div class="text-center py-30">
-                        <img
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/juntos-hacemos-mas.png"
-                            alt=""
-                            class="img-fluid"
-                        />
-                        <img
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/yo-soy-voluntari@.png"
-                            alt=""
-                            class="img-fluid"
-                        />
+                        <?php if ($imagen_izquierda_1): ?>
+                            <img
+                                src="<?php echo esc_url(
+                                    $imagen_izquierda_1
+                                ); ?>"
+                                alt=""
+                                class="img-fluid"
+                            />
+                        <?php endif; ?>
+                        <?php if ($imagen_izquierda_2): ?>
+                            <img
+                                src="<?php echo esc_url(
+                                    $imagen_izquierda_2
+                                ); ?>"
+                                alt=""
+                                class="img-fluid"
+                            />
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 text-end">
-                <img
-                    src="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/thumb-voluntarios.png"
-                    alt=""
-                    class="img-fluid"
-                />
+                <?php if ($imagen_derecha): ?>
+                    <img
+                        src="<?php echo esc_url($imagen_derecha); ?>"
+                        alt=""
+                        class="img-fluid"
+                    />
+                <?php endif; ?>
             </div>
         </div>
     </div>

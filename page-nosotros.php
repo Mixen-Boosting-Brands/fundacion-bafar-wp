@@ -119,18 +119,15 @@ $imagen_respeto = $valores["imagen_de_fondo_respeto"] ?? "";
                     <?php endif; ?>
                 </h1>
                 <?php if ($texto_1): ?>
-                    <p><?php echo esc_html($texto_1); ?></p>
+                    <?php echo esc_html($texto_1); ?>
                 <?php endif; ?>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-8 mb-4 my-lg-auto">
                 <?php if ($texto_2): ?>
-                    <p><?php echo esc_html($texto_2); ?></p>
+                    <?php echo esc_html($texto_2); ?>
                 <?php endif; ?>
-                <h6>
-                    Fundación Grupo Bafar: Comprometidos por formar <strong>mejores mexicanos</strong>
-                </h6>
             </div>
             <div class="col-lg-4 my-auto text-center">
                 <?php if ($imagen_derecha): ?>
@@ -165,7 +162,7 @@ $imagen_respeto = $valores["imagen_de_fondo_respeto"] ?? "";
         </div>
         <div class="row">
             <div class="col-10 offset-1 col-lg-12 offset-lg-0 text-center">
-                <p><?php echo esc_html($texto_mision); ?></p>
+                <?php echo esc_html($texto_mision); ?>
             </div>
         </div>
     </div>
@@ -191,7 +188,7 @@ $imagen_respeto = $valores["imagen_de_fondo_respeto"] ?? "";
         </div>
         <div class="row">
             <div class="col-10 offset-1 col-lg-12 offset-lg-0 text-center">
-                <p><?php echo esc_html($texto_vision); ?></p>
+                <?php echo esc_html($texto_vision); ?>
             </div>
         </div>
     </div>
