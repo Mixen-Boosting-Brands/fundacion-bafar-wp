@@ -119,14 +119,14 @@ $imagen_respeto = $valores["imagen_de_fondo_respeto"] ?? "";
                     <?php endif; ?>
                 </h1>
                 <?php if ($texto_1): ?>
-                    <?php echo esc_html($texto_1); ?>
+                    <?php echo wp_kses_post($texto_1); ?>
                 <?php endif; ?>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-8 mb-4 my-lg-auto">
                 <?php if ($texto_2): ?>
-                    <?php echo esc_html($texto_2); ?>
+                    <?php echo wp_kses_post($texto_2); ?>
                 <?php endif; ?>
             </div>
             <div class="col-lg-4 my-auto text-center">
@@ -162,7 +162,7 @@ $imagen_respeto = $valores["imagen_de_fondo_respeto"] ?? "";
         </div>
         <div class="row">
             <div class="col-10 offset-1 col-lg-12 offset-lg-0 text-center">
-                <?php echo esc_html($texto_mision); ?>
+                <?php echo wp_kses_post($texto_mision); ?>
             </div>
         </div>
     </div>
@@ -188,7 +188,7 @@ $imagen_respeto = $valores["imagen_de_fondo_respeto"] ?? "";
         </div>
         <div class="row">
             <div class="col-10 offset-1 col-lg-12 offset-lg-0 text-center">
-                <?php echo esc_html($texto_vision); ?>
+                <?php echo wp_kses_post($texto_vision); ?>
             </div>
         </div>
     </div>

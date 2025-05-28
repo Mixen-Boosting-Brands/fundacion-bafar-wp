@@ -90,7 +90,7 @@ $imagen_izquierda_2 = $voluntarios["imagen_del_lado_izquierdo_2"] ?? "";
                         <?php endif; ?>
                     </h1>
                     <?php if ($texto): ?>
-                        <?php echo esc_html($texto); ?>
+                        <?php echo wp_kses_post($texto); ?>
                     <?php endif; ?>
                     <div class="text-center py-30">
                         <?php if ($imagen_izquierda_1): ?>
