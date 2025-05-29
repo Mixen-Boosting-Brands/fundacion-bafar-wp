@@ -19,6 +19,12 @@ $imagen_del_lado_derecho = $banner_principal["imagen_del_lado_derecho"] ?? "";
 $aliados = get_field("aliados") ?: [];
 $titulo_seccion = $aliados["titulo_seccion"] ?? "";
 $logotipos = $aliados["logotipos"] ?? "";
+
+// Custom fields (Logros)
+$logros = get_field("logros") ?: [];
+$titulo_normal = $logros["titulo_normal"] ?? "";
+$titulo_negritas = $logros["titulo_negritas"] ?? "";
+$imagen_de_fondo_logros = $logros["imagen_de_fondo"] ?? "";
 ?>
 
 <section id="jumbotron" class="bg-jumbotron-home" style="background: url('<?php echo esc_url(
@@ -145,7 +151,9 @@ $logotipos = $aliados["logotipos"] ?? "";
     </div>
 </section>
 
-<section id="logros" class="m-v">
+<section id="logros" class="m-v" style="background: url('<?php echo esc_url(
+    $imagen_de_fondo_logros
+); ?>') center center / cover no-repeat;">
     <div class="overlay"></div>
     <div class="container">
         <div class="row mb-4">
@@ -153,8 +161,12 @@ $logotipos = $aliados["logotipos"] ?? "";
                 class="col-10 offset-1 col-lg-12 offset-lg-0"
             >
                 <h1>
-                    <span class="fw-light">Explora</span><br>
-                    <span class="fw-bold">Nuestros logros</span>
+                    <span class="fw-light"><?php echo esc_html(
+                        $titulo_normal
+                    ); ?></span><br>
+                    <span class="fw-bold"><?php echo esc_html(
+                        $titulo_negritas
+                    ); ?></span>
                 </h1>
             </div>
         </div>
