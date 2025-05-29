@@ -35,7 +35,7 @@ $imagen_del_lado_derecho = $banner["imagen_del_lado_derecho"] ?? "";
                             <h2><?php echo esc_html($texto_superior); ?></h2>
                         <?php endif; ?>
                         <?php if ($texto_inferior): ?>
-                            <h1 class="fw-bold"><?php echo esc_html(
+                            <h1 class="fw-bold" style="position: relative; z-index: 1;"><?php echo esc_html(
                                 $texto_inferior
                             ); ?></h1>
                         <?php endif; ?>
