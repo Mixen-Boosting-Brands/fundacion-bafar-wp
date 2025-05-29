@@ -3,11 +3,11 @@
 <section id="jumbotron" class="bg-jumbotron-1">
     <div class="container-fluid">
         <div class="row">
-            <div class="mb-5 col-lg-6 my-lg-auto order-lg-2 text-end">
-                <?php the_post_thumbnail("thumb-noticia-grande", [
+            <!-- div class="mb-5 col-lg-6 my-lg-auto order-lg-2 text-end">
+                <!-- the_post_thumbnail("thumb-noticia-grande", [
                     "class" => "thumb-noticia-grande img-fluid",
-                ]); ?>
-            </div>
+                ]); >
+            </div -->
             <div
                 class="col-lg-5 offset-lg-1 my-lg-auto order-lg-1 text-center text-lg-start"
             >
