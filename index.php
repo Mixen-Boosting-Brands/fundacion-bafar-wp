@@ -23,7 +23,7 @@ $logotipos = $aliados["logotipos"] ?? "";
 // Custom fields (Logros)
 $logros = get_field("logros") ?: [];
 $titulo_normal = $logros["titulo_normal"] ?? "";
-$titulo_negritas = $logros["titulo_negritas"] ?? "";
+$titulo_en_negritas = $logros["titulo_en_negritas"] ?? "";
 $imagen_de_fondo_logros = $logros["imagen_de_fondo"] ?? "";
 ?>
 
@@ -165,7 +165,7 @@ $imagen_de_fondo_logros = $logros["imagen_de_fondo"] ?? "";
                         $titulo_normal
                     ); ?></span><br>
                     <span class="fw-bold"><?php echo esc_html(
-                        $titulo_negritas
+                        $titulo_en_negritas
                     ); ?></span>
                 </h1>
             </div>
