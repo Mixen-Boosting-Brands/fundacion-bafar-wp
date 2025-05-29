@@ -40,7 +40,7 @@
                     <!-- php the_post_thumbnail("thumb-noticia-grande", [
                         "class" => "img-fluid mb-4",
                     ]); -->
-                    <h1>
+                    <h1 style="position: relative; z-index: 1;">
                         <?php the_title(); ?>
                     </h1>
                     <?php the_content(); ?>
