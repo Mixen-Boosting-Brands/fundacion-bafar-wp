@@ -3,11 +3,11 @@
 <section id="jumbotron" class="bg-jumbotron-1">
     <div class="container-fluid">
         <div class="row">
-            <!-- div class="mb-5 col-lg-6 my-lg-auto order-lg-2 text-end">
-                <!-- the_post_thumbnail("thumb-noticia-grande", [
+            <div class="mb-5 col-lg-6 my-lg-auto order-lg-2 text-end">
+                <?php the_post_thumbnail("thumb-noticia-grande", [
                     "class" => "thumb-noticia-grande img-fluid",
-                ]); >
-            </div -->
+                ]); ?>
+            </div>
             <div
                 class="col-lg-5 offset-lg-1 my-lg-auto order-lg-1 text-center text-lg-start"
             >
@@ -37,9 +37,9 @@
                 <?php if (have_posts()):
                     while (have_posts()):
                         the_post(); ?>
-                    <?php the_post_thumbnail("thumb-noticia-grande", [
+                    <!-- php the_post_thumbnail("thumb-noticia-grande", [
                         "class" => "img-fluid mb-4",
-                    ]); ?>
+                    ]); -->
                     <h1>
                         <?php the_title(); ?>
                     </h1>
