@@ -13,7 +13,7 @@
             >
                 <div class="row mb-5">
                     <div class="col-12">
-                        <h1 class="fw-bold"><?php the_title(); ?></h1>
+                        <h1 class="fw-bold" style="position: relative; z-index: 1;"><?php the_title(); ?></h1>
                     </div>
                 </div>
                 <div class="row">
@@ -40,7 +40,7 @@
                     <!-- php the_post_thumbnail("thumb-noticia-grande", [
                         "class" => "img-fluid mb-4",
                     ]); -->
-                    <h1 style="position: relative; z-index: 1;">
+                    <h1>
                         <?php the_title(); ?>
                     </h1>
                     <?php the_content(); ?>
